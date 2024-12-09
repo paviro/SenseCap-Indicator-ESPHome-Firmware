@@ -79,7 +79,7 @@ To add a tile add the following block below `widgets:`.
 You can change `sensor_tile.yaml` to `sensor_tile_wide.yaml` for a tile version that is wide instead of square.  
 
 **esphome\_sensor\_id:** Must match with the ID you used to add the sensor in the beginning.  
-**icon:** Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/fonts.yaml) for icons that are available.  
+**icon:** Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
 **unit:** Unit of the sensor.  
 **subtitle:** Subtitle shown below the sensor value.
 
