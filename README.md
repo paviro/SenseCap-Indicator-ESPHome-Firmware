@@ -1,8 +1,8 @@
 <div align="center">
 	
-	# HomeDicator - A SenseCap Indicator Firmware using ESPHome
+# HomeDicator - A SenseCap Indicator Firmware using ESPHome
 	
-	✨ A customisable SenseCap Indicator Firmware using ESPHome. Design inspired by [official example project](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_ha). ✨
+✨ A customisable SenseCap Indicator Firmware using ESPHome. Design inspired by [official example project](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_ha). ✨
 	
 </div>
 
