@@ -10,8 +10,8 @@
 
 ## Features
 - Supports multiple pages
-- Each page can have multiple tiles
-	-	Currently supported tiles are: 
+- Each page can have multiple tiles (4 visible at the same time - more with scrolling)
+	-	Currently supported tiles are:
 		- Sensor tiles (square & wide)
 		- More will be added in the future
 - Settings page to configure screen timeout, 24h clock and screen brightness
