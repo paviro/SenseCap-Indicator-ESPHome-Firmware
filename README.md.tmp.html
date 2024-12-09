@@ -33,22 +33,25 @@
 
 <h2>Configuration</h2>
 
-<p>Copy both the <code>sensecap-indicator.yaml</code> and the <code>sensecap-indicator</code> folder into your esphome config folder. You can have multiple <code>sensecap-indicator.yaml</code> with different names for different devices. The folder must retain its name and does not need to be duplicated for each device. </p>
+<p>Copy both the <code>sensecap-indicator.yaml</code> and the <code>sensecap-indicator</code> folder into your esphome config folder. <br />
+You can have multiple <code>sensecap-indicator.yaml</code> with different names for different devices. <br />
+The folder must retain its name and does not need to be duplicated for each device. </p>
 
-<p>Open the <code>sensecap-indicator.yaml</code> and get conformable with its settings. The following is an example of how to add a sensor to a page (the only functionality currently supported).</p>
+<p>Open the <code>sensecap-indicator.yaml</code> and get conformable with its settings. <br />
+The following is an example of how to add a sensor to a page (the only functionality currently supported).</p>
 
 <p>Below the sensor block, add the following configuration for each sensor you wish to add:
 <code>
 - !include 
     file: sensecap-indicator/core/templates/sensor.yaml
     vars:
-        hass_sensor_id: "sensor.airgradient_schlafzimmer_temperature"
-        esphome_sensor_id: "airgradiant_schlafzimmer_temp"
+      hass_sensor_id: "sensor.airgradient_schlafzimmer_temperature"
+      esphome_sensor_id: "airgradiant_schlafzimmer_temp"
 </code>
-<strong>hass_sensor_id:</strong> This is the entity ID of your sensor in Home Assistant
+<strong>hass_sensor_id:</strong> This is the entity ID of your sensor in Home Assistant. <br />
 <strong>esphome_sensor_id:</strong> This is the ID that the sensor will use within ESPHome. It can be freely set but must be unique.</p>
 
-<p>Once you have added your sensors, go to the "ADD / ADJUST YOUR PAGES HERE" section.
+<p>Once you have added your sensors, go to the <strong>ADD / ADJUST YOUR PAGES HERE</strong> section.
 A page looks like this:
 <code>
 - id: first_page
@@ -58,16 +61,16 @@ A page looks like this:
     - !include
         file: sensecap-indicator/user_interface/templates/page_title.yaml
         vars:
-            title: "Bedroom" # CHANGE PAGE TITLE HERE
+          title: "Bedroom" # CHANGE PAGE TITLE HERE
     - obj:
         styles: content_container
         layout: 
-            type: FLEX
-            flex_flow: ROW_WRAP
-            flex_align_main: LV_FLEX_ALIGN_START
-            flex_align_cross: CENTER
-            widgets:
-                # Your tiles go here!
+          type: FLEX
+          flex_flow: ROW_WRAP
+          flex_align_main: LV_FLEX_ALIGN_START
+          flex_align_cross: CENTER
+          widgets:
+            # Your tiles go here!
 </code>
 You can use this block if you want to add more pages. Make sure that the id is unique and that you update the title.  </p>
 
@@ -76,15 +79,16 @@ You can use this block if you want to add more pages. Make sure that the id is u
 - !include
     file: sensecap-indicator/user_interface/templates/tiles/sensor_tile.yaml
     vars:
-        esphome_sensor_id: "airgradiant_schlafzimmer_temp"
-        icon: "\U000F02E3"
-        unit: "°C"
-        subtitle: "Bedroom"
+      esphome_sensor_id: "airgradiant_schlafzimmer_temp"
+      icon: "\U000F02E3"
+      unit: "°C"
+      subtitle: "Bedroom"
 </code> 
-You can change <code>sensor_tile.yaml</code> to <code>sensor_tile_wide.yaml</code> for a tile version that is wide instead of square.
-<strong>esphome_sensor_id:</strong> Must match with the ID you used to add the sensor in the beginning.
-<strong>icon:</strong> Unicode codepoint of the icon you want to use. See <a href="https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/fonts.yaml">here</a> for icons that are available.
-<strong>unit:</strong> Unit of the sensor.
+You can change <code>sensor_tile.yaml</code> to <code>sensor_tile_wide.yaml</code> for a tile version that is wide instead of square.  </p>
+
+<p><strong>esphome_sensor_id:</strong> Must match with the ID you used to add the sensor in the beginning. <br />
+<strong>icon:</strong> Unicode codepoint of the icon you want to use. See <a href="https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/fonts.yaml">here</a> for icons that are available. <br />
+<strong>unit:</strong> Unit of the sensor. <br />
 <strong>subtitle:</strong> Subtitle shown below the sensor value.</p>
 
 <p>A screen can hold four square tiles at a time, but you can add more and access them by scrolling down on the Indicator.  </p>
@@ -95,5 +99,6 @@ You can change <code>sensor_tile.yaml</code> to <code>sensor_tile_wide.yaml</cod
 
 <h2>A word of caution!</h2>
 
-<p>I build this in my spare time as a hobby. In general, I make no guarantees that it will work forever, even though I intend to keep maintaining it, but sometimes other things are more important. <br />
+<p>I build this in my spare time as a hobby. <br />
+In general, I make no guarantees that it will work forever, even though I intend to keep maintaining it, but sometimes other things are more important. <br />
 I also give no guarantees that updates here will not break existing configurations and require a new configuration - especially now in the early stages this will most definitely happen.</p>
