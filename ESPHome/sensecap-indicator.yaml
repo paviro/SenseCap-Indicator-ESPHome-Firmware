@@ -91,7 +91,7 @@ lvgl:
               flex_align_cross: CENTER
             widgets:
               - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/info_tile.yaml
+                  file: sensecap-indicator/user_interface/templates/tiles/sensor_tile.yaml
                   vars:
                     esphome_sensor_id: "example_sensor_id_change_me"
                     icon: "\U000F02E3"
