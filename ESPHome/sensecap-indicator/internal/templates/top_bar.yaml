@@ -1,0 +1,30 @@
+obj:
+  id: lvgl_top_bar_container
+  x: 0
+  y: 0
+  width: 480
+  height: SIZE_CONTENT
+  pad_all: 15
+  pad_bottom: 0
+  bg_opa: TRANSP
+  layout: 
+    type: FLEX
+    flex_flow: ROW 
+    flex_align_main: SPACE_BETWEEN
+    flex_align_cross: CENTER
+  align: TOP_MID
+  widgets:
+    # CLOCK
+    - label:
+        text_color: 0xFFFFFF
+        text_font: libreFranklin14
+        text_align: LEFT
+        id: lvgl_current_time
+        text: "00:00"
+      # WiFi INDICATOR
+    - label:
+        text_color: 0xFFFFFF
+        text_font: icons24
+        text_align: RIGHT
+        id: lvgl_wifi_signal_icon
+        text: "\U000F092F"

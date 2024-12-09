@@ -1,0 +1,45 @@
+obj:
+  styles: info_or_button_tile_wide
+  layout: 
+    type: FLEX
+    flex_flow: COLUMN
+    flex_align_main: CENTER
+    flex_align_cross: CENTER
+    flex_align_track: CENTER
+    pad_row: 0
+  widgets:
+    - obj:
+        bg_opa: COVER
+        bg_color: 0xeebf41
+        pad_all: 0
+        height: 52
+        width: 100
+        radius: 25
+        layout:
+          type: FLEX
+          flex_flow: COLUMN
+          flex_align_main: CENTER
+          flex_align_cross: CENTER
+          flex_align_track: CENTER
+        widgets:
+          - label:
+              styles: info_or_button_tile_icon
+              text: ${tile_icon}
+    - obj:
+        styles: info_or_button_tile_info
+        layout: 
+          type: FLEX
+          flex_flow: ROW
+          flex_align_main: CENTER
+          flex_align_cross: END
+          pad_row: 3
+        widgets:
+          - label:
+              text_font: libreFranklin32
+              text: ${tile_value}
+          - label:
+              text_font: libreFranklin20Light
+              text: ${tile_unit}
+    - label:
+        styles: info_or_button_tile_subtitle
+        text: ${tile_subtitle}

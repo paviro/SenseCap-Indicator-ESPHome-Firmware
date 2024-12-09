@@ -1,0 +1,40 @@
+esphome:
+  name: ${device_name}
+  friendly_name: ${device_friendly_name}
+  project:
+    name: "paulvincentroll.SenseCAP_Indicator_Firmware"
+    version: "0.1"
+
+  platformio_options:
+    build_unflags: -Werror=all
+  
+  on_boot:
+    - priority: 800.0
+      then:
+        - script.execute: create_pager_dots
+    - priority: 200.0
+      then:
+        - select.set_index:
+            id: turn_off_screen_after_selector
+            index: !lambda "return id(turn_off_screen_after_value);"
+        - lambda: |-
+            id(use_24h_clock_switch).publish_state(id(use_24h_clock));
+        - lvgl.widget.update:
+            id: lvgl_24h_clock_switch
+            state:
+              checked: !lambda "return id(use_24h_clock);"
+      
+logger:
+  level: DEBUG
+  
+api:
+  encryption:
+    key: ${api_key}
+    
+ota:
+  - platform: esphome
+    password: ${ota_key}
+    
+wifi:
+  ssid: ${wifi_ssid}
+  password: ${wifi_password}

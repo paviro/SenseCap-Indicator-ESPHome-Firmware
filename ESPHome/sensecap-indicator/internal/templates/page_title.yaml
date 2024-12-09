@@ -1,0 +1,10 @@
+label:
+  x: 0
+  y: 50
+  width: 480
+  pad_all: 0
+  height: SIZE_CONTENT
+  text_color: 0xFFFFFF
+  text_font: libreFranklin24
+  text_align: CENTER
+  text: ${title}

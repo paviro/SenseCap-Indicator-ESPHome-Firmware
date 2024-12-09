@@ -1,0 +1,13 @@
+obj:
+  id: bottom_pager
+  x: 0
+  y: 450
+  pad_all: 0
+  width: 480
+  height: SIZE_CONTENT
+  bg_opa: TRANSP
+  layout: 
+    type: FLEX
+    flex_flow: ROW
+    flex_align_main: CENTER
+    flex_align_cross: CENTER
