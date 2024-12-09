@@ -16,8 +16,6 @@
 		- More will be added in the future
 - Settings page to configure screen timeout, 24h clock and screen brightness
 
-<img src="./.assets/cover_image_2.jpg">
-
 ## Planed
 - Additional tiles including:
 	- Light brightness tiles
@@ -25,6 +23,8 @@
 	- Switch tiles
 	- Button tiles
 - Thermostat view (that can be linked to a tile showing the current temperature and opens on click)
+
+<img src="./.assets/cover_image_2.jpg">
 
 ## Configuration
 Copy both the `sensecap-indicator.yaml` and the `sensecap-indicator` folder into your esphome config folder.  
