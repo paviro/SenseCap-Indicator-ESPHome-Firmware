@@ -16,6 +16,8 @@
 		- More will be added in the future
 - Settings page to configure screen timeout, 24h clock and screen brightness
 
+<img src="./.assets/cover_image_2.jpg">
+
 ## Planed
 - Additional tiles including:
 	- Light brightness tiles
