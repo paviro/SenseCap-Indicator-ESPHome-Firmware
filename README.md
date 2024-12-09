@@ -6,7 +6,7 @@
 </div>
 
 <img src="./.assets/cover_image.jpg">
-<hr>
+
 
 ## Features
 - Supports multiple pages
