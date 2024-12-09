@@ -33,12 +33,17 @@ sensor:
   # Because of the way ESPHOME works lights, thermostats, etc also go here
   # ----------------------------------------------------------------------
 
+  - !include 
+      file: sensecap-indicator/core/templates/sensor.yaml
+      vars:
+        hass_sensor_id: "sensor.example_sensor_id_change_me"
+        esphome_sensor_id: "example_sensor_id_change_me"
 
   # ----------------------------
   # INTERNAL SENSORS DON'T TOUCH
   # ----------------------------
-  - !include sensecap-indicator/core/sensors/wifi_signal.yaml
-  - !include sensecap-indicator/core/sensors/wifi_signal_percent.yaml
+  - !include sensecap-indicator/core/config/sensors/wifi_signal.yaml
+  - !include sensecap-indicator/core/config/sensors/wifi_signal_percent.yaml
   
 
 binary_sensor:
@@ -50,7 +55,7 @@ binary_sensor:
   # ----------------------------
   # INTERNAL SENSORS DON'T TOUCH
   # ----------------------------
-  - !include sensecap-indicator/core/binary_sensors/indicator_button.yaml
+  - !include sensecap-indicator/core/config/binary_sensors/indicator_button.yaml
          
 switch:
   # ----------------------
@@ -61,20 +66,22 @@ switch:
   # -----------------------------
   # INTERNAL SWITCHES DON'T TOUCH
   # -----------------------------
-  - !include sensecap-indicator/core/switches/use_24h_clock_switch.yaml
+  - !include sensecap-indicator/core/config/switches/use_24h_clock_switch.yaml
 
 
 lvgl:  
   pages:
+    # ----------------------------
+    # ADD / ADJUST YOUR PAGES HERE
+    # ----------------------------
     - id: first_page
-      bg_color: 0x1b1b1b
+      bg_color: 0x1b1b1b # PAGE BACKGROUND COLOR
       bg_opa: COVER
       widgets:
-        # PAGE TITLE
         - !include
             file: sensecap-indicator/user_interface/templates/page_title.yaml
             vars:
-              title: "Heating Control"
+              title: "Bedroom" # CHANGE PAGE TITLE HERE
         - obj:
             styles: content_container
             layout: 
@@ -86,38 +93,10 @@ lvgl:
               - !include
                   file: sensecap-indicator/user_interface/templates/tiles/info_tile.yaml
                   vars:
-                    tile_icon: "\U000F02E3"
-                    tile_value: "20.5"
-                    tile_unit: "°C"
-                    tile_subtitle: "Bedroom"
-              - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/info_tile.yaml
-                  vars:
-                    tile_icon: "\U000F04B9"
-                    tile_value: "18.0"
-                    tile_unit: "°C"
-                    tile_subtitle: "Living Room"
-              - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/info_tile.yaml
-                  vars:
-                    tile_icon: "\U000F09A0"
-                    tile_value: "23.1"
-                    tile_unit: "°C"
-                    tile_subtitle: "Bathroom"
-              - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/info_tile.yaml
-                  vars:
-                    tile_icon: "\U000F09AB"
-                    tile_value: "17.5"
-                    tile_unit: "°C"
-                    tile_subtitle: "Toilet"
-              - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/info_tile.yaml
-                  vars:
-                    tile_icon: "\U000F0821"
-                    tile_value: "19.4"
-                    tile_unit: "°C"
-                    tile_subtitle: "Corridor"
+                    esphome_sensor_id: "example_sensor_id_change_me"
+                    icon: "\U000F02E3"
+                    unit: "°C"
+                    subtitle: "Bedroom"
    
 
 
@@ -130,8 +109,8 @@ lvgl:
   # ----------------------
   # INTERNAL - DON'T TOUCH
   # ----------------------
-  on_idle: !include sensecap-indicator/core/lvgl/on_idle.yaml
-  top_layer: !include sensecap-indicator/core/lvgl/top_layer.yaml
+  on_idle: !include sensecap-indicator/core/config/lvgl/on_idle.yaml
+  top_layer: !include sensecap-indicator/core/config/lvgl/top_layer.yaml
   theme: !include sensecap-indicator/user_interface/theme/theme.yaml
   style_definitions: !include sensecap-indicator/user_interface/theme/style_definitions.yaml
 
@@ -139,11 +118,11 @@ lvgl:
 # ----------------------
 # INTERNAL - DON'T TOUCH
 # ----------------------
-<<: !include sensecap-indicator/core/fonts.yaml
-<<: !include sensecap-indicator/core/esphome.yaml
-<<: !include sensecap-indicator/core/hardware.yaml
-<<: !include sensecap-indicator/core/scripts.yaml
-<<: !include sensecap-indicator/core/light.yaml
-<<: !include sensecap-indicator/core/time.yaml
-<<: !include sensecap-indicator/core/select.yaml
-<<: !include sensecap-indicator/core/globals.yaml
+<<: !include sensecap-indicator/core/config/fonts.yaml
+<<: !include sensecap-indicator/core/config/esphome.yaml
+<<: !include sensecap-indicator/core/config/hardware.yaml
+<<: !include sensecap-indicator/core/config/scripts.yaml
+<<: !include sensecap-indicator/core/config/light.yaml
+<<: !include sensecap-indicator/core/config/time.yaml
+<<: !include sensecap-indicator/core/config/select.yaml
+<<: !include sensecap-indicator/core/config/globals.yaml

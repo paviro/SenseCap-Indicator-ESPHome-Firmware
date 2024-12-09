@@ -24,7 +24,7 @@ obj:
         widgets:
           - label:
               styles: info_or_button_tile_icon
-              text: ${tile_icon}
+              text: ${icon}
     - obj:
         styles: info_or_button_tile_info
         layout: 
@@ -35,11 +35,13 @@ obj:
           pad_row: 3
         widgets:
           - label:
+              id: lvgl_value_label_${esphome_sensor_id}
               text_font: libreFranklin32
-              text: ${tile_value}
+              text: "n/a"
           - label:
               text_font: libreFranklin20Light
-              text: ${tile_unit}
+              text: ${unit}
     - label:
         styles: info_or_button_tile_subtitle
-        text: ${tile_subtitle}
+        text: ${subtitle}
+        text_font: libreFranklin10

@@ -1,0 +1,64 @@
+obj:
+  styles: info_or_button_tile_wide
+  width: 440
+  layout: 
+    type: FLEX
+    flex_flow: ROW
+    flex_align_main: SPACE_EVENLY
+    flex_align_cross: CENTER
+    flex_align_track: CENTER
+    pad_row: 0
+  widgets:
+    - obj:
+        bg_opa: COVER
+        bg_color: 0xeebf41
+        pad_all: 0
+        height: 52
+        width: 100
+        radius: 25
+        layout:
+          type: FLEX
+          flex_flow: COLUMN
+          flex_align_main: CENTER
+          flex_align_cross: CENTER
+          flex_align_track: CENTER
+        widgets:
+          - label:
+              styles: info_or_button_tile_icon
+              text: ${icon}
+    - obj:
+        width: SIZE_CONTENT
+        height: SIZE_CONTENT
+        bg_opa: TRANSP
+        pad_all: 0
+        layout:
+          type: FLEX
+          flex_flow: COLUMN
+          flex_align_main: CENTER
+          flex_align_cross: CENTER
+          flex_align_track: CENTER
+          pad_row: 0
+        widgets:
+          - obj:
+              width: SIZE_CONTENT
+              height: SIZE_CONTENT
+              styles: info_or_button_tile_info
+              pad_top: 0
+              layout: 
+                type: FLEX
+                flex_flow: ROW
+                flex_align_main: CENTER
+                flex_align_cross: END
+                pad_row: 3
+              widgets:
+                - label:
+                    id: lvgl_value_label_${esphome_sensor_id}
+                    text_font: libreFranklin50
+                    text: "n/a"
+                - label:
+                    text_font: libreFranklin25Light
+                    text: ${unit}
+          - label:
+              styles: info_or_button_tile_subtitle
+              text: ${subtitle}
+              text_font: libreFranklin10

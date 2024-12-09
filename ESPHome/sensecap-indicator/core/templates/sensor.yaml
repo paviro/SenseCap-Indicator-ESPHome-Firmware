@@ -1,0 +1,10 @@
+platform: homeassistant
+id: ${esphome_sensor_id}
+entity_id: ${hass_sensor_id}
+on_value:
+  - lvgl.label.update:
+      id: lvgl_value_label_${esphome_sensor_id}
+      text: !lambda |-
+        char buffer[10];
+        snprintf(buffer, sizeof(buffer), "%.1f", x);
+        return buffer;

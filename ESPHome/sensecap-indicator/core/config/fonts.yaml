@@ -46,6 +46,15 @@ font:
       type: gfonts
       family: Libre+Franklin
       weight: 600
+    id: libreFranklin10
+    size: 14
+    bpp: 8
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+  
+  - file:
+      type: gfonts
+      family: Libre+Franklin
+      weight: 600
     id: libreFranklin14
     size: 14
     bpp: 8
@@ -78,6 +87,15 @@ font:
     size: 20
     bpp: 8
     glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    
+  - file:
+      type: gfonts
+      family: Libre+Franklin
+      weight: 500
+    id: libreFranklin25Light
+    size: 25
+    bpp: 8
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
   
   - file:
       type: gfonts
@@ -85,5 +103,14 @@ font:
       weight: 600
     id: libreFranklin32
     size: 32
+    bpp: 8
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    
+  - file:
+      type: gfonts
+      family: Libre+Franklin
+      weight: 600
+    id: libreFranklin50
+    size: 50
     bpp: 8
     glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
