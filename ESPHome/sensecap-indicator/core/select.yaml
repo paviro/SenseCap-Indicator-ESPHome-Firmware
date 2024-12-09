@@ -1,0 +1,11 @@
+select:
+  - platform: lvgl
+    widget: lvgl_display_backlight_timeout
+    name: Turn off screen after
+    id: turn_off_screen_after_selector
+    entity_category: config
+    internal: true
+    on_value:
+      - globals.set:
+          id: turn_off_screen_after_value
+          value: !lambda "return i;"

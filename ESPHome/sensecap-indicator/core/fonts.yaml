@@ -1,0 +1,89 @@
+font:
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: icons24
+    size: 24
+    bpp: 8
+    glyphs: [
+      "\U000F092F",  # mdi:wifi-strength-outline
+      "\U000F091F",  # mdi:wifi-strength-1
+      "\U000F0922",  # mdi:wifi-strength-2
+      "\U000F0925",  # mdi:wifi-strength-3
+      "\U000F0928",  # mdi:wifi-strength-4
+    ]
+  
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: icons35
+    size: 35
+    bpp: 8
+    glyphs: [
+      "\U000F050F",  # mdi:thermometer
+      "\U000F02E3", # mdi:bed
+      "\U000F04B9", # mdi:sofa
+      "\U000F1B2A", # mdi:faucet-variant
+      "\U000F09A0", # mdi:shower
+      "\U000F09AB", # mdi:toilet
+      "\U000F0821", # mdi:floor-plan
+    ]
+  
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: brightness_small
+    size: 20
+    bpp: 8
+    glyphs: [
+      "\U000F05A8",  # mdi:white-balance-sunny
+    ]
+  
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: brightness_big
+    size: 30
+    bpp: 8
+    glyphs: [
+      "\U000F05A8",  # mdi:white-balance-sunny
+    ]
+  
+  
+  - file:
+      type: gfonts
+      family: Libre+Franklin
+      weight: 600
+    id: libreFranklin14
+    size: 14
+    bpp: 8
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+  
+  - file:
+      type: gfonts
+      family: Libre+Franklin
+      weight: 600
+    id: libreFranklin18
+    size: 18
+    bpp: 8
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    
+    
+  - file:
+      type: gfonts
+      family: Libre+Franklin
+      weight: 600
+    id: libreFranklin24
+    size: 24
+    bpp: 8
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+  
+  - file:
+      type: gfonts
+      family: Libre+Franklin
+      weight: 500
+    id: libreFranklin20Light
+    size: 20
+    bpp: 8
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+  
+  - file:
+      type: gfonts
+      family: Libre+Franklin
+      weight: 600
+    id: libreFranklin32
+    size: 32
+    bpp: 8
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'

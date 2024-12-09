@@ -1,0 +1,16 @@
+platform: lvgl
+widget: lvgl_24h_clock_switch
+name: Use 24h hour clock
+id: use_24h_clock_switch
+entity_category: config
+internal: true
+on_turn_on:
+  - globals.set:
+      id: use_24h_clock
+      value: 'true'
+  - script.execute: update_time
+on_turn_off:
+  - globals.set:
+      id: use_24h_clock
+      value: 'false'
+  - script.execute: update_time

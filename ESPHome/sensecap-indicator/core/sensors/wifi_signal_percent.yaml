@@ -1,0 +1,26 @@
+platform: copy
+id: wifi_signal_percent
+source_id: wifi_signal_db
+internal: true
+name: "WiFi Signal Percent"
+filters:
+  - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
+on_value:
+  - lvgl.label.update:
+      id: lvgl_wifi_signal_icon
+      text: !lambda |-
+        static char buf[10];
+        std::string icon;
+        if (x == 100.0) {
+            icon = "\U000F0928";
+        } else if (x > 75) {
+            icon = "\U000F0925";
+        } else if (x > 50) {
+            icon = "\U000F0922";
+        } else if (x > 25) {
+            icon = "\U000F091F";
+        } else {
+            icon = "\U000F092F";
+        }
+        snprintf(buf, sizeof(buf), "%s", icon.c_str());
+        return buf;

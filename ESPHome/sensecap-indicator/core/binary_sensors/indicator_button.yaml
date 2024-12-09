@@ -1,0 +1,18 @@
+platform: gpio
+internal: true
+id: indicator_button
+name: "Indicator Button"
+pin:
+  number: GPIO38
+  inverted: yes
+  mode:
+    input: true
+    pullup: true
+on_press:
+  then:
+    - if:
+        condition: lvgl.is_paused
+        then:
+          - script.execute: activity_detected
+        else:
+          - script.execute: activity_timeout_reached

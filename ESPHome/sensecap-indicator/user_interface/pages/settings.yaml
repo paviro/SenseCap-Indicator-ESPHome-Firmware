@@ -4,7 +4,7 @@ bg_opa: COVER
 widgets:
   # PAGE TITLE
   - !include
-      file: ../page_title.yaml
+      file: ../templates/page_title.yaml
       vars:
         title: "Settings"
   - obj:

@@ -1,0 +1,10 @@
+timeout: !lambda |-
+  switch (id(turn_off_screen_after_value)) {
+    case 0: return 600000;  // "Never" (10 min in ms / will check as a condition in the then block)
+    case 1: return 60000;   // "1 min"
+    case 2: return 300000;  // "5 min"
+    case 3: return 900000;  // "15 min"
+    default: return 600000; // Default to 10 min in case of an invalid index
+  }
+then:
+  - script.execute: activity_timeout_reached
