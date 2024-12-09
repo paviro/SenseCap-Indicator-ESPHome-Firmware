@@ -1,4 +1,261 @@
 font:
+  # ---------------
+  # Icons for tiles
+  # ---------------
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: icons35
+    size: 35
+    bpp: 8
+    glyphs: [
+      "\U000F001B", # mdi:air-conditioner
+      "\U000F0D43", # mdi:air-filter
+      "\U000F078F", # mdi:alarm-light
+      "\U000F0BEA", # mdi:alarm-light-outline
+      "\U000F0030", # mdi:amplifier
+      "\U000F1119", # mdi:antenna
+      "\U000F1818", # mdi:bathtub
+      "\U000F1819", # mdi:bathtub-outline
+      "\U000F0079", # mdi:battery
+      "\U000F12A3", # mdi:battery-high
+      "\U000F12A2", # mdi:battery-medium
+      "\U000F008E", # mdi:battery-outline
+      "\U000F02E3", # mdi:bed
+      "\U000F0099", # mdi:bed-outline
+      "\U000F0FD2", # mdi:bed-king
+      "\U000F0FD1", # mdi:bed-king-outline
+      "\U000F08A0", # mdi:bed-empty
+      "\U000F00DE", # mdi:brightness-5
+      "\U000F1302", # mdi:bunk-bed
+      "\U000F0097", # mdi:bunk-bed-outline
+      "\U000F010B", # mdi:car
+      "\U000F14ED", # mdi:car-outline
+      "\U000F0B6C", # mdi:car-electric
+      "\U000F15B5", # mdi:car-electric-outline
+      "\U000F1797", # mdi:ceiling-fan
+      "\U000F1798", # mdi:ceiling-fan-light
+      "\U000F0769", # mdi:ceiling-light
+      "\U000F18DD", # mdi:ceiling-light-multiple
+      "\U000F18DE", # mdi:ceiling-light-multiple-outline
+      "\U000F17C7", # mdi:ceiling-light-outline
+      "\U000F0127", # mdi:chart-areaspline
+      "\U000F015F", # mdi:cloud
+      "\U000F0163", # mdi:cloud-outline
+      "\U000F095F", # mdi:desk-lamp
+      "\U000F1B20", # mdi:desk-lamp-on
+      "\U000F1239", # mdi:desk
+      "\U000F01C5", # mdi:desktop-tower
+      "\U000F07C0", # mdi:desktop-classic
+      "\U000F0200", # mdi:ethernet
+      "\U000F0210", # mdi:fan
+      "\U000F1B2A", # mdi:faucet-variant
+      "\U000F1B29", # mdi:faucet
+      "\U000F0238", # mdi:fire
+      "\U000F0241", # mdi:flash
+      "\U000F06D5", # mdi:flash-outline
+      "\U000F0244", # mdi:flashlight
+      "\U000F08DD", # mdi:floor-lamp
+      "\U000F17C8", # mdi:floor-lamp-outline
+      "\U000F1040", # mdi:floor-lamp-dual
+      "\U000F17CE", # mdi:floor-lamp-dual-outline
+      "\U000F1747", # mdi:floor-lamp-torchiere
+      "\U000F17D6", # mdi:floor-lamp-torchiere-outline
+      "\U000F1041", # mdi:floor-lamp-torchiere-variant
+      "\U000F17CF", # mdi:floor-lamp-torchiere-variant-outline
+      "\U000F0821", # mdi:floor-plan
+      "\U000F024A", # mdi:flower
+      "\U000F09F0", # mdi:flower-outline
+      "\U000F1885", # mdi:flower-pollen
+      "\U000F1886", # mdi:flower-pollen-outline
+      "\U000F09F1", # mdi:flower-tulip
+      "\U000F09F2", # mdi:flower-tulip-outline
+      "\U000F1916", # mdi:food-outline
+      "\U000F05F2", # mdi:food-fork-drink
+      "\U000F1897", # mdi:forest
+      "\U000F1C63", # mdi:forest-outline
+      "\U000F0290", # mdi:fridge
+      "\U000F0292", # mdi:fridge-bottom
+      "\U000F028F", # mdi:fridge-outline
+      "\U000F12D4", # mdi:garage-open-variant
+      "\U000F12D3", # mdi:garage-variant
+      "\U000F0873", # mdi:gauge-empty
+      "\U000F12D7", # mdi:globe-light-outline
+      "\U000F066F", # mdi:globe-light
+      "\U000F02CA", # mdi:harddisk
+      "\U000F1A43", # mdi:heat-pump
+      "\U000F1A44", # mdi:heat-pump-outline
+      "\U000F1901", # mdi:home-battery
+      "\U000F1902", # mdi:home-battery-outline
+      "\U000F1251", # mdi:home-lightbulb
+      "\U000F1252", # mdi:home-lightbulb-outline
+      "\U000F1903", # mdi:home-lightning-bolt
+      "\U000F1904", # mdi:home-lightning-bolt-outline
+      "\U000F08EB", # mdi:home-lock
+      "\U000F08EC", # mdi:home-lock-open
+      "\U000F0F54", # mdi:home-thermometer
+      "\U000F0F55", # mdi:home-thermometer-outline
+      "\U000F0828", # mdi:hot-tub
+      "\U000F0A60", # mdi:ip-network
+      "\U000F0C90", # mdi:ip-network-outline
+      "\U000F06B5", # mdi:lamp
+      "\U000F17D0", # mdi:lamp-outline
+      "\U000F1576", # mdi:lamps
+      "\U000F17D1", # mdi:lamps-outline
+      "\U000F0317", # mdi:lan
+      "\U000F0318", # mdi:lan-connect
+      "\U000F0322", # mdi:laptop
+      "\U000F07D5", # mdi:lava-lamp
+      "\U000F032D", # mdi:led-outline
+      "\U000F032C", # mdi:led-on
+      "\U000F07D6", # mdi:led-strip
+      "\U000F1051", # mdi:led-strip-variant
+      "\U000F1987", # mdi:light-flood-down
+      "\U000F1988", # mdi:light-flood-up
+      "\U000F179B", # mdi:light-recessed
+      "\U000F097E", # mdi:light-switch
+      "\U000F1A24", # mdi:light-switch-off
+      "\U000F0335", # mdi:lightbulb
+      "\U000F1253", # mdi:lightbulb-group
+      "\U000F1254", # mdi:lightbulb-group-outline
+      "\U000F0336", # mdi:lightbulb-outline
+      "\U000F1A4E", # mdi:lightbulb-on-10
+      "\U000F17F4", # mdi:lightbulb-spot
+      "\U000F1802", # mdi:lightbulb-variant
+      "\U000F1803", # mdi:lightbulb-variant-outline
+      "\U000F140B", # mdi:lightning-bolt
+      "\U000F140C", # mdi:lightning-bolt-outline
+      "\U000F191E", # mdi:liquor
+      "\U000F033E", # mdi:lock
+      "\U000F0341", # mdi:lock-outline
+      "\U000F033F", # mdi:lock-open
+      "\U000F0340", # mdi:lock-open-outline
+      "\U000F0FC6", # mdi:lock-open-variant
+      "\U000F0FC7", # mdi:lock-open-variant-outline
+      "\U000F06EE", # mdi:mailbox
+      "\U000F0D8C", # mdi:mailbox-outline
+      "\U000F035B", # mdi:memory
+      "\U000F117B", # mdi:meditation
+      "\U000F07DC", # mdi:micro-sd
+      "\U000F0C99", # mdi:microwave
+      "\U000F12FE", # mdi:molecule-co
+      "\U000F07E4", # mdi:molecule-co2
+      "\U000F0379", # mdi:monitor
+      "\U000F0BAC", # mdi:molecule
+      "\U000F15B7", # mdi:moped-electric
+      "\U000F15B8", # mdi:moped-electric-outline
+      "\U000F0D91", # mdi:motion-sensor
+      "\U000F15BA", # mdi:motorbike-electric
+      "\U000F07DF", # mdi:mushroom
+      "\U000F098C", # mdi:muffin
+      "\U000F075A", # mdi:music
+      "\U000F08F3", # mdi:nas
+      "\U000F117E", # mdi:noodles
+      "\U000F1054", # mdi:outdoor-lamp
+      "\U000F1157", # mdi:paper-roll
+      "\U000F1158", # mdi:paper-roll-outline
+      "\U000F0F80", # mdi:patio-heater
+      "\U000F1A5F", # mdi:pool-thermometer
+      "\U000F1A60", # mdi:post-lamp
+      "\U000F0425", # mdi:power
+      "\U000F06A5", # mdi:power-plug
+      "\U000F1C3B", # mdi:power-plug-battery
+      "\U000F1425", # mdi:power-plug-outline
+      "\U000F0904", # mdi:power-sleep
+      "\U000F0428", # mdi:presentation
+      "\U000F0429", # mdi:presentation-play
+      "\U000F042A", # mdi:printer
+      "\U000F042B", # mdi:printer-3d
+      "\U000F0E5B", # mdi:printer-3d-nozzle
+      "\U000F0E5C", # mdi:printer-3d-nozzle-outline
+      "\U000F18B8", # mdi:printer-3d-nozzle-heat
+      "\U000F18B9", # mdi:printer-3d-nozzle-heat-outline
+      "\U000F1786", # mdi:printer-outline
+      "\U000F042F", # mdi:projector-screen
+      "\U000F1724", # mdi:projector-screen-outline
+      "\U000F1402", # mdi:pump
+      "\U000F0438", # mdi:radiator
+      "\U000F043C", # mdi:radioactive
+      "\U000F043F", # mdi:raspberry-pi
+      "\U000F099A", # mdi:record-player
+      "\U000F1A6B", # mdi:roller-shade
+      "\U000F0469", # mdi:router-wireless
+      "\U000F046E", # mdi:run-fast
+      "\U000F0909", # mdi:satellite-uplink
+      "\U000F11D4", # mdi:rv-truck
+      "\U000F0473", # mdi:scale-bathroom
+      "\U000F1958", # mdi:scent
+      "\U000F0EC9", # mdi:scatter-plot
+      "\U000F0ECA", # mdi:scatter-plot-outline
+      "\U000F15BE", # mdi:scooter-electric
+      "\U000F0483", # mdi:security
+      "\U000F048B", # mdi:server
+      "\U000F048D", # mdi:server-network
+      "\U000F1C9A", # mdi:server-outline
+      "\U000F09A0", # mdi:shower
+      "\U000F09A1", # mdi:shower-head
+      "\U000F04B9", # mdi:sofa
+      "\U000F156D", # mdi:sofa-outline
+      "\U000F0A72", # mdi:solar-power
+      "\U000F1A73", # mdi:solar-power-variant
+      "\U000F1A74", # mdi:solar-power-variant-outline
+      "\U000F1092", # mdi:soldering-iron
+      "\U000F04C3", # mdi:speaker
+      "\U000F0D38", # mdi:speaker-multiple
+      "\U000F04C8", # mdi:spotlight
+      "\U000F04C9", # mdi:spotlight-beam
+      "\U000F04CD", # mdi:stairs
+      "\U000F12BE", # mdi:stairs-down
+      "\U000F12BD", # mdi:stairs-up
+      "\U000F12BA", # mdi:string-lights
+      "\U000F06AC", # mdi:subway
+      "\U000F04DF", # mdi:subway-variant
+      "\U000F04E6", # mdi:sync
+      "\U000F05BC", # mdi:table-furniture
+      "\U000F0D9E", # mdi:tea
+      "\U000F0D9F", # mdi:tea-outline
+      "\U000F0502", # mdi:television
+      "\U000F1356", # mdi:television-ambient-light
+      "\U000F07F4", # mdi:television-classic
+      "\U000F050D", # mdi:theater
+      "\U000F050F", # mdi:thermometer
+      "\U000F0510", # mdi:thermometer-lines
+      "\U000F10C3", # mdi:thermometer-low
+      "\U000F0393", # mdi:thermostat
+      "\U000F1063", # mdi:toaster
+      "\U000F0CD3", # mdi:toaster-oven
+      "\U000F09AB", # mdi:toilet
+      "\U000F0914", # mdi:track-light
+      "\U000F052C", # mdi:train
+      "\U000F052D", # mdi:tram
+      "\U000F0D3E", # mdi:transmission-tower
+      "\U000F192C", # mdi:transmission-tower-export
+      "\U000F192D", # mdi:transmission-tower-import
+      "\U000F0917", # mdi:tumble-dryer
+      "\U000F06B0", # mdi:update
+      "\U000F11E1", # mdi:vanity-light
+      "\U000F0567", # mdi:video
+      "\U000F0BDC", # mdi:video-outline
+      "\U000F0581", # mdi:volume-off
+      "\U000F057E", # mdi:volume-high
+      "\U000F075E", # mdi:volume-minus
+      "\U000F075D", # mdi:volume-plus
+      "\U000F075F", # mdi:volume-mute
+      "\U000F0588", # mdi:wan
+      "\U000F072A", # mdi:washing-machine
+      "\U000F0F91", # mdi:wardrobe-outline
+      "\U000F111C", # mdi:window-shutter
+      "\U000F111E", # mdi:window-shutter-open
+    ]
+
+
+
+
+
+
+
+
+  # ----------------------
+  # User Interface Related
+  # ----------------------
   - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
     id: icons24
     size: 24
@@ -9,20 +266,6 @@ font:
       "\U000F0922",  # mdi:wifi-strength-2
       "\U000F0925",  # mdi:wifi-strength-3
       "\U000F0928",  # mdi:wifi-strength-4
-    ]
-  
-  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
-    id: icons35
-    size: 35
-    bpp: 8
-    glyphs: [
-      "\U000F050F",  # mdi:thermometer
-      "\U000F02E3", # mdi:bed
-      "\U000F04B9", # mdi:sofa
-      "\U000F1B2A", # mdi:faucet-variant
-      "\U000F09A0", # mdi:shower
-      "\U000F09AB", # mdi:toilet
-      "\U000F0821", # mdi:floor-plan
     ]
   
   - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
