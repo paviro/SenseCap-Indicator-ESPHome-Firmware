@@ -1,0 +1,78 @@
+obj:
+  height: SIZE_CONTENT
+  width: SIZE_CONTENT
+  pad_all: 0
+  bg_opa: TRANSP
+  widgets:
+    - obj:
+        styles: info_or_button_tile_wide
+        width: 440
+        layout: 
+          type: FLEX
+          flex_flow: COLUMN
+          flex_align_main: START
+          flex_align_cross: CENTER
+          flex_align_track: CENTER
+          pad_row: 0
+        widgets:
+          - label:
+              text_font: libreFranklin18
+              text_color: 0xffffff
+              text: ${subtitle}
+              pad_top: 18
+              pad_bottom: 10
+          - slider:
+              id: lvgl_slider_${hass_climate_id}
+              min_value: ${min_value}
+              max_value: ${max_value}
+              value: ${min_value}
+              height: 85
+              width: 375
+              radius: 15
+              bg_color: 0x3c3c3c
+              indicator:
+                radius: 10
+                bg_grad: temperature_slider
+              knob:
+                bg_opa: TRANSP
+                radius: 10
+                pad_top: 0
+                pad_bottom: 0
+                pad_left: -40
+                pad_right: -40
+              on_press:
+                then:
+                  - globals.set:
+                      id: user_is_interacting
+                      value: 'true'
+              on_release:
+                then:
+                  - globals.set:
+                      id: user_is_interacting
+                      value: 'false'
+              on_value: !include helpers/on_value.yaml
+    - obj:
+        bg_opa: TRANSP
+        width: SIZE_CONTENT
+        height: SIZE_CONTENT
+        pad_all: 0
+        x: 50
+        y: 75
+        layout: 
+          type: FLEX
+          flex_flow: ROW
+          flex_align_main: CENTER
+          flex_align_cross: END
+          pad_row: 0
+          pad_column: 0
+        widgets:
+          - label:
+              id: lvgl_value_label_${hass_climate_id}
+              text_font: libreFranklin32
+              text_color: 0xffffff
+              text: "n/a"
+          - label:
+              text_font: libreFranklin25Light
+              text_color: 0xffffff
+              text: "${unit}"
+    

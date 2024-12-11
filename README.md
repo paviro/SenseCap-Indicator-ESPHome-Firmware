@@ -13,7 +13,7 @@
 - Each page can have multiple tiles (4 visible at the same time - more with scrolling)
 	-	Currently supported tiles are:
 		- Sensor tiles (square & wide)
-		- Thermostat tile (square)
+		- Thermostat tiles (square & wide)
 		- More will be added in the future
 - Settings page to configure screen timeout, 24h clock and screen brightness
 
@@ -109,7 +109,7 @@ You can change `square.yaml` to `wide.yaml` for a tile version that is wide inst
 **unit:** Unit of the sensor.  
 **subtitle:** Subtitle shown below the sensor value.
 
-#### Climate tile
+#### Thermostat tile
 To control a heating thermostat add the following block below `widgets:`.  
 ```yaml
 - !include
@@ -121,6 +121,10 @@ To control a heating thermostat add the following block below `widgets:`.
       max_value: 25
       subtitle: "Living Room"
 ```
+You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
+
+> [!WARNING]  
+> Using the wide version requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
 
 **color:** The color that will be used for the control gauge and temperature label.  
 **hass\_climate\_id:** Must be the same as within the sensor config block.  

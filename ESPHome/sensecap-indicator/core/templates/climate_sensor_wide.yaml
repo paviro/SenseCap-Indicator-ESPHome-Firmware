@@ -14,7 +14,7 @@ on_value:
             char buffer[10];
             snprintf(buffer, sizeof(buffer), "%.0f", x);
             return buffer;
-      - lvgl.arc.update:
-          id: lvgl_arc_${hass_climate_id}
+      - lvgl.slider.update:
+          id: lvgl_slider_${hass_climate_id}
           value: !lambda |-
             return x;
