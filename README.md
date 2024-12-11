@@ -47,7 +47,7 @@ Below the sensor block, add the following configuration for each number sensor y
 ```
 
 > [!NOTE]
-> **hass\_sensor\_id:** This is the entity ID of your sensor in Home Assistant. Omit the "sensor." portion you find within Home Assistant.  
+> `hass_sensor_id`: This is the entity ID of your sensor in Home Assistant. Omit the "sensor." portion you find within Home Assistant.  
 
 #### Climate sensor ("climate." domain)
 Below the sensor block, add the following configuration for each thermostat you wish to add.  
@@ -60,7 +60,7 @@ It will be used to fetch the currently set temperature.
 ```
 
 > [!NOTE]
-> **hass\_climate\_id:** This is the entity ID of your climate entity in Home Assistant. Omit the "climate." portion you find within Home Assistant.  
+> `hass_climate_id`: This is the entity ID of your climate entity in Home Assistant. Omit the "climate." portion you find within Home Assistant.  
 
 
 ### Pages
@@ -110,11 +110,11 @@ To show a numeric sensor value add the following block below `widgets:`.
 > You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
 
 > [!NOTE]
-> **color:** The color that will be used for the icon and value label.
-> **hass\_sensor\_id:** Must be the same as within the sensor config block.  
-> **icon:** Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
-> **unit:** Unit of the sensor.  
-> **subtitle:** Subtitle shown below the sensor value.
+> `color`: The color that will be used for the icon and value label.
+> `hass_sensor_id`: Must be the same as within the sensor config block.  
+> `icon`: Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
+> `unit`: Unit of the sensor.  
+> `subtitle`: Subtitle shown below the sensor value.
 
 #### Thermostat tile
 To control a heating thermostat add the following block below `widgets:`.  
@@ -130,11 +130,11 @@ To control a heating thermostat add the following block below `widgets:`.
 ```
 
 > [!NOTE]
-> **color:** The color that will be used for the control gauge and temperature label.  
-> **hass\_climate\_id:** Must be the same as within the sensor config block.  
-> **min_value:** The minimum value that is possible to set.   
-> **max_value:** The maximum value that is possible to set.   
-> **subtitle:** Subtitle shown below the sensor value.   
+> `color`: The color that will be used for the control gauge and temperature label.  
+> `hass_climate_id`: Must be the same as within the sensor config block.  
+> `min_value`: The minimum value that is possible to set.   
+> `max_value`: The maximum value that is possible to set.   
+> `subtitle`: Subtitle shown below the sensor value.   
 
 > [!TIP]
 > You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
