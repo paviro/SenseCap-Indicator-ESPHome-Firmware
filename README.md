@@ -33,8 +33,9 @@ The folder must retain its name and does not need to be duplicated for each devi
 
 Open the `sensecap-indicator.yaml` and get conformable with its settings.  
 
-### Sensor
-Tiles require sensors to be added to import the state of entities from Home Assistant into ESPHome. There are different sensor templates for different kind of Home Assistant entities.
+### Sensors
+Tiles require sensors to be added to import the state of entities from Home Assistant into ESPHome.  
+There are different sensor templates for different kind of Home Assistant entities.
 
 #### Number sensor ("sensor." domain)
 Below the sensor block, add the following configuration for each number sensor you wish to add:
@@ -47,7 +48,8 @@ Below the sensor block, add the following configuration for each number sensor y
 **hass\_sensor\_id:** This is the entity ID of your sensor in Home Assistant. Omit the "sensor." portion you find within Home Assistant.  
 
 #### Climate sensor ("climate." domain)
-Below the sensor block, add the following configuration for each thermostat you wish to add. It will be used to fetch the currently set temperature.
+Below the sensor block, add the following configuration for each thermostat you wish to add.  
+It will be used to fetch the currently set temperature.
 ```yaml
 - !include 
     file: sensecap-indicator/core/templates/climate_sensor.yaml
