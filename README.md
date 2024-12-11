@@ -46,7 +46,7 @@ Below the sensor block, add the following configuration for each number sensor y
       hass_sensor_id: "airgradient_schlafzimmer_temperature"
 ```
 
-> [!TIP]
+> [!NOTE]
 > **hass\_sensor\_id:** This is the entity ID of your sensor in Home Assistant. Omit the "sensor." portion you find within Home Assistant.  
 
 #### Climate sensor ("climate." domain)
