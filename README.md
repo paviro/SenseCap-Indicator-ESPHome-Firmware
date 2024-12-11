@@ -45,7 +45,9 @@ Below the sensor block, add the following configuration for each number sensor y
     vars:
       hass_sensor_id: "airgradient_schlafzimmer_temperature"
 ```
-**hass\_sensor\_id:** This is the entity ID of your sensor in Home Assistant. Omit the "sensor." portion you find within Home Assistant.  
+
+> [!TIP]
+> **hass\_sensor\_id:** This is the entity ID of your sensor in Home Assistant. Omit the "sensor." portion you find within Home Assistant.  
 
 #### Climate sensor ("climate." domain)
 Below the sensor block, add the following configuration for each thermostat you wish to add.  
@@ -56,7 +58,9 @@ It will be used to fetch the currently set temperature.
     vars:
       hass_climate_id: "schlafzimmer_schreibtisch" # Omit the "climate." portion you find within Home Assistant
 ```
-**hass\_climate\_id:** This is the entity ID of your climate entity in Home Assistant. Omit the "climate." portion you find within Home Assistant.  
+
+> [!NOTE]
+> **hass\_climate\_id:** This is the entity ID of your climate entity in Home Assistant. Omit the "climate." portion you find within Home Assistant.  
 
 
 ### Pages
@@ -101,13 +105,15 @@ To show a numeric sensor value add the following block below `widgets:`.
       unit: "°C"
       subtitle: "Bedroom"
 ```	
-You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
+> [!TIP]
+> You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
 
-**color:** The color that will be used for the icon and value label.
-**hass\_sensor\_id:** Must be the same as within the sensor config block.  
-**icon:** Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
-**unit:** Unit of the sensor.  
-**subtitle:** Subtitle shown below the sensor value.
+> [!NOTE]
+> **color:** The color that will be used for the icon and value label.
+> **hass\_sensor\_id:** Must be the same as within the sensor config block.  
+> **icon:** Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
+> **unit:** Unit of the sensor.  
+> **subtitle:** Subtitle shown below the sensor value.
 
 #### Thermostat tile
 To control a heating thermostat add the following block below `widgets:`.  
@@ -121,16 +127,19 @@ To control a heating thermostat add the following block below `widgets:`.
       max_value: 25
       subtitle: "Living Room"
 ```
-You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
+> [!TIP]
+> You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
 
 > [!WARNING]  
 > Using the wide version requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
 
-**color:** The color that will be used for the control gauge and temperature label.  
-**hass\_climate\_id:** Must be the same as within the sensor config block.  
-**min_value:** The minimum value that is possible to set.   
-**max_value:** The maximum value that is possible to set.   
-**subtitle:** Subtitle shown below the sensor value.   
+> [!NOTE]
+> **color:** The color that will be used for the control gauge and temperature label.  
+> **hass\_climate\_id:** Must be the same as within the sensor config block.  
+> **min_value:** The minimum value that is possible to set.   
+> **max_value:** The maximum value that is possible to set.   
+> **subtitle:** Subtitle shown below the sensor value.   
+
 
 ### Final notes
 You can now compile your firmware and install it on your device.  
