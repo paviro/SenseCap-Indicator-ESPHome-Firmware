@@ -93,7 +93,7 @@ A screen can hold four square tiles at a time, but you can add more and access t
 To show a numeric sensor value add the following block below `widgets:`.  
 ```yaml
 - !include
-    file: sensecap-indicator/user_interface/templates/tiles/sensor_tile.yaml
+    file: sensecap-indicator/user_interface/templates/tiles/sensor/square.yaml
     vars:
       color: 0xeebf41
       hass_sensor_id: "airgradient_schlafzimmer_temperature"
@@ -101,7 +101,7 @@ To show a numeric sensor value add the following block below `widgets:`.
       unit: "°C"
       subtitle: "Bedroom"
 ```	
-You can change `sensor_tile.yaml` to `sensor_tile_wide.yaml` for a tile version that is wide instead of square.  
+You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
 
 **color:** The color that will be used for the icon and value label.
 **hass\_sensor\_id:** Must be the same as within the sensor config block.  
@@ -113,7 +113,7 @@ You can change `sensor_tile.yaml` to `sensor_tile_wide.yaml` for a tile version 
 To control a heating thermostat add the following block below `widgets:`.  
 ```yaml
 - !include
-    file: sensecap-indicator/user_interface/templates/tiles/thermostat_tile.yaml
+    file: sensecap-indicator/user_interface/templates/tiles/thermostat/square.yaml
     vars:
       color: 0xeebf41
       hass_climate_id: "schlafzimmer_schreibtisch"

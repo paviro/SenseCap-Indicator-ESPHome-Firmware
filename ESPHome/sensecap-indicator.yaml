@@ -95,7 +95,7 @@ lvgl:
               flex_align_cross: CENTER
             widgets:
               - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/sensor_tile.yaml
+                  file: sensecap-indicator/user_interface/templates/tiles/sensor/square.yaml
                   vars:
                     color: 0xeebf41
                     hass_sensor_id: "example_sensor_id_change_me"
@@ -103,7 +103,7 @@ lvgl:
                     unit: "°C"
                     subtitle: "Bedroom"
               - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/thermostat_tile.yaml
+                  file: sensecap-indicator/user_interface/templates/tiles/thermostat/square.yaml
                   vars:
                     color: 0xeebf41
                     hass_climate_id: "example_climate_id_change_me"

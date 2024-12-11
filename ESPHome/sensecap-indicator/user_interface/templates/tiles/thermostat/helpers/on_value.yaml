@@ -1,0 +1,17 @@
+if:
+  condition:
+    lambda: |-
+      return id(user_is_interacting);
+  then:
+    - lvgl.label.update:
+        id: lvgl_value_label_${hass_climate_id}
+        text: !lambda |-
+          char buffer[10];
+          snprintf(buffer, sizeof(buffer), "%.0f", x);
+          return buffer;
+    - homeassistant.action:
+        action: climate.set_temperature
+        data:
+          entity_id: climate.${hass_climate_id}
+          temperature: !lambda |-
+            return static_cast<int>(x);
