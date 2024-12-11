@@ -4,6 +4,9 @@ esphome:
   project:
     name: "paulvincentroll.SenseCAP_Indicator_Firmware"
     version: "0.1"
+    
+  includes:
+    - sensecap-indicator/core/helpers/adjust_color.h
 
   platformio_options:
     build_unflags: -Werror=all
