@@ -1,0 +1,114 @@
+obj:
+  styles: info_or_button_tile
+  layout: 
+    type: FLEX
+    flex_flow: COLUMN
+    flex_align_main: CENTER
+    flex_align_cross: CENTER
+    flex_align_track: CENTER
+    pad_row: 0
+  widgets:
+    - obj:
+        width: 205
+        height: 155
+        radius: 15
+        pad_all: 0
+        bg_opa: TRANSP
+        widgets:
+          - obj:
+              width: 205
+              height: 155
+              radius: 15
+              pad_all: 0
+              pad_top: 53
+              bg_opa: TRANSP
+              layout: 
+                type: FLEX
+                flex_flow: COLUMN
+                flex_align_main: CENTER
+                flex_align_cross: CENTER
+                flex_align_track: CENTER
+                pad_row: 0
+              widgets:
+                - obj:
+                    bg_opa: TRANSP
+                    width: SIZE_CONTENT
+                    height: SIZE_CONTENT
+                    pad_all: 0
+                    pad_left: 5
+                    pad_bottom: 37
+                    text_color: ${color}
+                    layout: 
+                      type: FLEX
+                      flex_flow: ROW
+                      flex_align_main: CENTER
+                      flex_align_cross: CENTER
+                      pad_row: 0
+                      pad_column: 0
+                    widgets:
+                      - label:
+                          id: lvgl_value_label_${hass_climate_id}
+                          text_font: libreFranklin32
+                          text: "n/a"
+                      - label:
+                          text_font: libreFranklin20Light
+                          text: "°"
+                - label:
+                    text_align: CENTER
+                    styles: info_or_button_tile_subtitle
+                    text: ${subtitle}
+                    text_font: libreFranklin10
+          - obj:
+              width: 205
+              height: 155
+              radius: 15
+              bg_opa: TRANSP
+              pad_all: 0
+              layout: 
+                type: FLEX
+                flex_flow: COLUMN
+                flex_align_main: CENTER
+                flex_align_cross: CENTER
+                flex_align_track: CENTER
+                pad_row: 0
+              widgets:
+                - arc:
+                    id: lvgl_arc_${hass_climate_id}
+                    pad_all: 0
+                    adjustable: true
+                    min_value: ${min_value}
+                    max_value: ${max_value}
+                    value: ${min_value}
+                    arc_width: 20
+                    arc_color: !lambda |- # Using arc_opa sadly causes the circle used for the rounded end to be visible so shifting the color to a darker value
+                      uint32_t color = ${color};
+                      float darken_factor = 0.25;
+                      float saturation_reduction_factor = 0.8;
+                      return adjust_color(color, darken_factor, saturation_reduction_factor);
+                    indicator:
+                      arc_width: 20
+                      arc_color: ${color}
+                    knob:
+                      bg_color: 0xFFFFFF
+                    on_press:
+                      then:
+                        - globals.set:
+                            id: user_is_interacting
+                            value: 'true'
+                    on_release:
+                      then:
+                        - globals.set:
+                            id: user_is_interacting
+                            value: 'false'
+                    on_value:
+                      - if:
+                          condition:
+                            lambda: |-
+                              return id(user_is_interacting);
+                          then:
+                            - homeassistant.action:
+                                action: climate.set_temperature
+                                data:
+                                  entity_id: climate.${hass_climate_id}
+                                  temperature: !lambda |-
+                                    return static_cast<int>(x);

@@ -36,8 +36,12 @@ sensor:
   - !include 
       file: sensecap-indicator/core/templates/sensor.yaml
       vars:
-        hass_sensor_id: "sensor.example_sensor_id_change_me"
-        esphome_sensor_id: "example_sensor_id_change_me"
+        hass_sensor_id: "example_sensor_id_change_me" # You can ommit the "sensor."
+        
+  - !include 
+      file: sensecap-indicator/core/templates/climate_sensor.yaml
+      vars:
+        hass_climate_id: "example_climate_id_change_me" # You can ommit the "climate."
 
   # ----------------------------
   # INTERNAL SENSORS DON'T TOUCH
@@ -93,11 +97,19 @@ lvgl:
               - !include
                   file: sensecap-indicator/user_interface/templates/tiles/sensor_tile.yaml
                   vars:
-                    esphome_sensor_id: "example_sensor_id_change_me"
                     color: 0xeebf41
+                    hass_sensor_id: "example_sensor_id_change_me"
                     icon: "\U000F02E3"
                     unit: "°C"
                     subtitle: "Bedroom"
+              - !include
+                  file: sensecap-indicator/user_interface/templates/tiles/thermostat_tile.yaml
+                  vars:
+                    color: 0xeebf41
+                    hass_climate_id: "example_climate_id_change_me"
+                    min_value: 5
+                    max_value: 25
+                    subtitle: "Living Room"
    
 
 

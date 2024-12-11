@@ -1,0 +1,20 @@
+platform: homeassistant
+id: ${hass_climate_id}
+entity_id: climate.${hass_climate_id}
+attribute: temperature
+on_value:
+  - lvgl.label.update:
+      id: lvgl_value_label_${hass_climate_id}
+      text: !lambda |-
+        char buffer[10];
+        snprintf(buffer, sizeof(buffer), "%.0f", x);
+        return buffer;
+  - if:
+     condition:
+       lambda: |-
+         return !id(user_is_interacting);
+     then:
+       - lvgl.arc.update:
+           id: lvgl_arc_${hass_climate_id}
+           value: !lambda |-
+            return x;
