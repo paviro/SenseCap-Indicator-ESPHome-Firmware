@@ -10,7 +10,7 @@ obj:
   widgets:
     - obj:
         bg_opa: COVER
-        bg_color: 0xeebf41
+        bg_color: ${color}
         pad_all: 0
         height: 52
         width: 100

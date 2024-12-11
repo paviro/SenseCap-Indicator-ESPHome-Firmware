@@ -94,6 +94,7 @@ lvgl:
                   file: sensecap-indicator/user_interface/templates/tiles/sensor_tile.yaml
                   vars:
                     esphome_sensor_id: "example_sensor_id_change_me"
+                    color: 0xeebf41
                     icon: "\U000F02E3"
                     unit: "°C"
                     subtitle: "Bedroom"
