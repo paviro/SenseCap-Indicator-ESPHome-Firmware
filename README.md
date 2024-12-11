@@ -13,7 +13,7 @@
 - Each page can have multiple tiles (4 visible at the same time - more with scrolling)
 	-	Currently supported tiles are:
 		- Sensor tiles (square & wide)
-    - Thermostat tile (square)
+		- Thermostat tile (square)
 		- More will be added in the future
 - Settings page to configure screen timeout, 24h clock and screen brightness
 
