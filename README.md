@@ -105,6 +105,7 @@ To show a numeric sensor value add the following block below `widgets:`.
       unit: "°C"
       subtitle: "Bedroom"
 ```	
+
 > [!TIP]
 > You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
 
@@ -127,11 +128,6 @@ To control a heating thermostat add the following block below `widgets:`.
       max_value: 25
       subtitle: "Living Room"
 ```
-> [!TIP]
-> You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
-
-> [!WARNING]  
-> Using the wide version requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
 
 > [!NOTE]
 > **color:** The color that will be used for the control gauge and temperature label.  
@@ -139,6 +135,12 @@ To control a heating thermostat add the following block below `widgets:`.
 > **min_value:** The minimum value that is possible to set.   
 > **max_value:** The maximum value that is possible to set.   
 > **subtitle:** Subtitle shown below the sensor value.   
+
+> [!TIP]
+> You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
+
+> [!WARNING]  
+> Using the wide version requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
 
 
 ### Final notes
