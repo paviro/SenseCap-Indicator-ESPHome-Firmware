@@ -2,8 +2,8 @@ substitutions:
   # -----------------------
   # ADJUST DEVICE NAME HERE
   # -----------------------
-  device_name: "sensecap-indicator"
-  device_friendly_name: "SenseCAP Indicator"
+  device_name: "homedicator"
+  device_friendly_name: "HomeDicator"
 
   # --------------------------
   # ENTER API AND OTA KEY HERE
@@ -34,20 +34,20 @@ sensor:
   # ----------------------------------------------------------------------
 
   - !include 
-      file: sensecap-indicator/core/templates/sensor.yaml
+      file: HomeDicator/core/templates/sensor.yaml
       vars:
         hass_sensor_id: "example_sensor_id_change_me" # You can ommit the "sensor."
         
   - !include 
-      file: sensecap-indicator/core/templates/climate_sensor.yaml
+      file: HomeDicator/core/templates/climate_sensor.yaml
       vars:
         hass_climate_id: "example_climate_id_change_me" # You can ommit the "climate."
 
   # ----------------------------
   # INTERNAL SENSORS DON'T TOUCH
   # ----------------------------
-  - !include sensecap-indicator/core/config/sensors/wifi_signal.yaml
-  - !include sensecap-indicator/core/config/sensors/wifi_signal_percent.yaml
+  - !include HomeDicator/core/config/sensors/wifi_signal.yaml
+  - !include HomeDicator/core/config/sensors/wifi_signal_percent.yaml
   
 
 binary_sensor:
@@ -59,7 +59,7 @@ binary_sensor:
   # ----------------------------
   # INTERNAL SENSORS DON'T TOUCH
   # ----------------------------
-  - !include sensecap-indicator/core/config/binary_sensors/indicator_button.yaml
+  - !include HomeDicator/core/config/binary_sensors/indicator_button.yaml
          
 switch:
   # ----------------------
@@ -70,7 +70,7 @@ switch:
   # -----------------------------
   # INTERNAL SWITCHES DON'T TOUCH
   # -----------------------------
-  - !include sensecap-indicator/core/config/switches/use_24h_clock_switch.yaml
+  - !include HomeDicator/core/config/switches/use_24h_clock_switch.yaml
 
 
 lvgl:  
@@ -83,7 +83,7 @@ lvgl:
       bg_opa: COVER
       widgets:
         - !include
-            file: sensecap-indicator/user_interface/templates/page_title.yaml
+            file: HomeDicator/user_interface/templates/page_title.yaml
             vars:
               title: "Bedroom" # CHANGE PAGE TITLE HERE
         - obj:
@@ -95,7 +95,7 @@ lvgl:
               flex_align_cross: CENTER
             widgets:
               - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/sensor/square.yaml
+                  file: HomeDicator/user_interface/templates/tiles/sensor/square.yaml
                   vars:
                     color: 0xeebf41
                     hass_sensor_id: "example_sensor_id_change_me"
@@ -103,7 +103,7 @@ lvgl:
                     unit: "°C"
                     title: "Bedroom"
               - !include
-                  file: sensecap-indicator/user_interface/templates/tiles/thermostat/square.yaml
+                  file: HomeDicator/user_interface/templates/tiles/thermostat/square.yaml
                   vars:
                     color: 0xeebf41
                     hass_climate_id: "example_climate_id_change_me"
@@ -116,26 +116,26 @@ lvgl:
    # ---------------------------
    # SETTINGS PAGE - DON'T TOUCH
    # ---------------------------
-    - !include sensecap-indicator/user_interface/pages/settings.yaml
+    - !include HomeDicator/user_interface/pages/settings.yaml
 
 
   # ----------------------
   # INTERNAL - DON'T TOUCH
   # ----------------------
-  on_idle: !include sensecap-indicator/core/config/lvgl/on_idle.yaml
-  top_layer: !include sensecap-indicator/core/config/lvgl/top_layer.yaml
-  theme: !include sensecap-indicator/user_interface/theme/theme.yaml
-  style_definitions: !include sensecap-indicator/user_interface/theme/style_definitions.yaml
+  on_idle: !include HomeDicator/core/config/lvgl/on_idle.yaml
+  top_layer: !include HomeDicator/core/config/lvgl/top_layer.yaml
+  theme: !include HomeDicator/user_interface/theme/theme.yaml
+  style_definitions: !include HomeDicator/user_interface/theme/style_definitions.yaml
 
 
 # ----------------------
 # INTERNAL - DON'T TOUCH
 # ----------------------
-<<: !include sensecap-indicator/core/config/fonts.yaml
-<<: !include sensecap-indicator/core/config/esphome.yaml
-<<: !include sensecap-indicator/core/config/hardware.yaml
-<<: !include sensecap-indicator/core/config/scripts.yaml
-<<: !include sensecap-indicator/core/config/light.yaml
-<<: !include sensecap-indicator/core/config/time.yaml
-<<: !include sensecap-indicator/core/config/select.yaml
-<<: !include sensecap-indicator/core/config/globals.yaml
+<<: !include HomeDicator/core/config/fonts.yaml
+<<: !include HomeDicator/core/config/esphome.yaml
+<<: !include HomeDicator/core/config/hardware.yaml
+<<: !include HomeDicator/core/config/scripts.yaml
+<<: !include HomeDicator/core/config/light.yaml
+<<: !include HomeDicator/core/config/time.yaml
+<<: !include HomeDicator/core/config/select.yaml
+<<: !include HomeDicator/core/config/globals.yaml

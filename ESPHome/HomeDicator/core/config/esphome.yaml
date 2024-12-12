@@ -6,7 +6,7 @@ esphome:
     version: "0.1"
     
   includes:
-    - sensecap-indicator/core/helpers/adjust_color.h
+    - HomeDicator/core/helpers/adjust_color.h
 
   platformio_options:
     build_unflags: -Werror=all

@@ -27,11 +27,11 @@
 <img src="./.assets/cover_image_2.jpg">
 
 ## Configuration
-Copy both the `sensecap-indicator.yaml` and the `sensecap-indicator` folder into your esphome config folder.  
-You can have multiple `sensecap-indicator.yaml` with different names for different devices.  
+Copy both the `HomeDicator.yaml` and the `HomeDicator` folder into your esphome config folder.  
+You can have multiple `HomeDicator.yaml` files with different names for different devices.  
 The folder must retain its name and does not need to be duplicated for each device. 
 
-Open the `sensecap-indicator.yaml` and get conformable with its settings.  
+Open the `HomeDicator.yaml` and get conformable with its settings.  
 
 ### Sensors
 Tiles require sensors to be added to import the state of entities from Home Assistant into ESPHome.  
@@ -41,7 +41,7 @@ There are different sensor templates for different kind of Home Assistant entiti
 Below the sensor block, add the following configuration for each number sensor you wish to add:
 ```yaml
 - !include 
-    file: sensecap-indicator/core/templates/sensor.yaml
+    file: HomeDicator/core/templates/sensor.yaml
     vars:
       hass_sensor_id: "airgradient_schlafzimmer_temperature"
 ```
@@ -54,7 +54,7 @@ Below the sensor block, add the following configuration for each thermostat you 
 It will be used to fetch the currently set temperature.
 ```yaml
 - !include 
-    file: sensecap-indicator/core/templates/climate_sensor.yaml
+    file: HomeDicator/core/templates/climate_sensor.yaml
     vars:
       hass_climate_id: "schlafzimmer_schreibtisch" # Omit the "climate." portion you find within Home Assistant
 ```
@@ -73,7 +73,7 @@ A page looks like this:
   bg_opa: COVER
   widgets:
     - !include
-        file: sensecap-indicator/user_interface/templates/page_title.yaml
+        file: HomeDicator/user_interface/templates/page_title.yaml
         vars:
           title: "Bedroom" # CHANGE PAGE TITLE HERE
     - obj:
@@ -97,7 +97,7 @@ A screen can hold four square tiles at a time, but you can add more and access t
 To show a numeric sensor value add the following block below `widgets:`.  
 ```yaml
 - !include
-    file: sensecap-indicator/user_interface/templates/tiles/sensor/square.yaml
+    file: HomeDicator/user_interface/templates/tiles/sensor/square.yaml
     vars:
       color: 0xeebf41
       hass_sensor_id: "airgradient_schlafzimmer_temperature"
@@ -112,7 +112,7 @@ To show a numeric sensor value add the following block below `widgets:`.
 > [!NOTE]
 > `color`: The color that will be used for the icon and value label.
 > `hass_sensor_id`: Must be the same as within the sensor config block.  
-> `icon`: Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
+> `icon`: Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/HomeDicator/core/config/fonts.yaml) for icons that are available.  
 > `unit`: Unit of the sensor.  
 > `title`: Title shown below the sensor value.
 
@@ -120,7 +120,7 @@ To show a numeric sensor value add the following block below `widgets:`.
 To control a heating thermostat add the following block below `widgets:`.  
 ```yaml
 - !include
-    file: sensecap-indicator/user_interface/templates/tiles/thermostat/square.yaml
+    file: HomeDicator/user_interface/templates/tiles/thermostat/square.yaml
     vars:
       color: 0xeebf41
       hass_climate_id: "schlafzimmer_schreibtisch"
@@ -132,7 +132,7 @@ To control a heating thermostat add the following block below `widgets:`.
 > [!NOTE]
 > `color`: The color that will be used for the control gauge and temperature label.  
 > `hass_climate_id`: Must be the same as within the sensor config block.  
-> `icon` (wide versions only): Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
+> `icon` (wide versions only): Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/HomeDicator/core/config/fonts.yaml) for icons that are available.  
 > `title` (square version only): Title shown below the sensor value.   
 > `min_value`: The minimum value that is possible to set.   
 > `max_value`: The maximum value that is possible to set.   
@@ -149,6 +149,9 @@ You can now compile your firmware and install it on your device.
 Make sure to add your device to Home Assistant (it should be discovered automatically) as it will not receive data if you don't.  
 > [!WARNING]  
 > If you use tiles that control devices within Home Assistant, you will need to grant permissions for your HomeDicator, see [here](https://esphome.io/components/api.html#api-actions).
+
+> [!TIP]
+> I have not yet figured out how to do swiping gestures within ESPHome. For now, you have to click on the bottom left/right area to switch pages. Swiping there also works somewhat.
 
 > [!CAUTION]
 > I build this in my spare time as a hobby.  
