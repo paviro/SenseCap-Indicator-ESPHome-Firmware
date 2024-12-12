@@ -148,9 +148,9 @@ To control a heating thermostat add the following block below `widgets:`.
 You can now compile your firmware and install it on your device.  
 Make sure to add your device to Home Assistant (it should be discovered automatically) as it will not receive data if you don't.  
 > [!WARNING]  
-> If you use tiles that control devices within Home Assistant, you will need to grant permissions for each ESPHome device you use, see [here](https://esphome.io/components/api.html#api-actions).
+> If you use tiles that control devices within Home Assistant, you will need to grant permissions for your HomeDicator, see [here](https://esphome.io/components/api.html#api-actions).
 
-## A word of caution!
-I build this in my spare time as a hobby.  
-In general, I make no guarantees that it will work forever, even though I intend to keep maintaining it, but sometimes other things are more important.  
-**I also give no guarantees that updates here will not break existing configurations and require a new configuration - especially now in the early stages this will definitely happen!**
+> [!CAUTION]
+> I build this in my spare time as a hobby.  
+> In general, I make no guarantees that it will work forever, even though I intend to keep maintaining it, but sometimes other things are more important.  
+> **I also give no guarantees that updates here will not break existing configurations and require a new configuration - especially now in the early stages this will definitely happen!**
