@@ -1,7 +1,7 @@
 light:
   - platform: monochromatic
     output: ledc_gpio45
-    name: Display backlight
+    name: Display
     id: indicator_display_backlight
     entity_category: config
     restore_mode: RESTORE_AND_ON
