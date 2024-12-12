@@ -138,8 +138,7 @@ To control a heating thermostat add the following block below `widgets:`.
 > `max_value`: The maximum value that is possible to set.   
 
 > [!TIP]
-> Multiple versions of this tile are available!  
-> Besides `square.yaml` there is `wide.yaml` and `wide-half-height.yaml`.
+> You can also change `square.yaml` to `wide.yaml` or `wide-half-height.yaml` for a wide and half-height wide version of the tile.
 
 > [!WARNING]  
 > Using `wide.yaml` or `wide-half-height.yaml` requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
