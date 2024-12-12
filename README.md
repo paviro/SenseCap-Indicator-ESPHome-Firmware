@@ -144,7 +144,7 @@ To control a heating thermostat add the following block below `widgets:`.
 > - `wide_half_height_icon_right.yaml` Half-height wide version of the tile with the icon on the right instead of the left.
 
 > [!WARNING]  
-> Using `wide.yaml` or `wide-half-height.yaml` requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
+> Using any of the wide versions requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
 
 
 ### Final notes
