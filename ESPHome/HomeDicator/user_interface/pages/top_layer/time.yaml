@@ -1,0 +1,9 @@
+label:
+    id: lvgl_current_time
+    pad_left: 15
+    pad_top: 15
+    align: TOP_LEFT
+    text_color: 0xFFFFFF
+    text_font: libreFranklin14
+    text_align: LEFT
+    text: "Syncing..."

@@ -13,5 +13,6 @@ widgets:
       - !include connecting_view.yaml
       
       # TIME AND WIFI STATUS
-      - !include top_bar.yaml
+      - !include time.yaml
+      - !include wifi.yaml
                   

@@ -1,0 +1,9 @@
+label:
+    id: lvgl_wifi_signal_icon
+    pad_right: 15
+    pad_top: 15
+    align: TOP_RIGHT
+    text_color: 0xFFFFFF
+    text_font: icons24
+    text_align: RIGHT
+    text: "\U000F092E"
