@@ -16,6 +16,7 @@
 		- Thermostat tiles (square & wide)
 		- More will be added in the future
 - Settings page to configure screen timeout, 24h clock and screen brightness
+- Bluetooth Proxy Enabled
 
 ## Planed
 - Additional tiles including:
