@@ -100,3 +100,17 @@ display:
         - GPIO12        #b4
         - GPIO11        #b5
         
+bluetooth_proxy:
+        
+ota:
+  - platform: esphome
+    password: ${ota_key}
+    
+wifi:
+  ssid: ${wifi_ssid}
+  password: ${wifi_password}
+  on_disconnect:
+      - lvgl.label.update:
+          id: lvgl_wifi_signal_icon
+          text: "\U000F092E"
+          

@@ -26,7 +26,7 @@ esphome:
             id: lvgl_24h_clock_switch
             state:
               checked: !lambda "return id(use_24h_clock);"
-              
+
 logger:
   level: INFO
   
@@ -48,17 +48,3 @@ api:
               return client_info.find("Home Assistant") != std::string::npos;
         then:
           - lvgl.widget.show: connecting_view
-    
-ota:
-  - platform: esphome
-    password: ${ota_key}
-    
-wifi:
-  ssid: ${wifi_ssid}
-  password: ${wifi_password}
-  on_disconnect:
-      - lvgl.label.update:
-          id: lvgl_wifi_signal_icon
-          text: "\U000F092E"
-  
-bluetooth_proxy:
