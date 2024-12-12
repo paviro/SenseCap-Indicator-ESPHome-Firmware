@@ -31,6 +31,7 @@ font:
       "\U000F14ED", # mdi:car-outline
       "\U000F0B6C", # mdi:car-electric
       "\U000F15B5", # mdi:car-electric-outline
+      "\U000F013B", # mdi:chemical-weapon
       "\U000F1797", # mdi:ceiling-fan
       "\U000F1798", # mdi:ceiling-fan-light
       "\U000F0769", # mdi:ceiling-light
@@ -292,7 +293,7 @@ font:
     id: libreFranklin10
     size: 14
     bpp: 8
-    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöüµ³²'
   
   - file:
       type: gfonts
@@ -301,7 +302,7 @@ font:
     id: libreFranklin14
     size: 14
     bpp: 8
-    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöüµ³²'
   
   - file:
       type: gfonts
@@ -310,7 +311,7 @@ font:
     id: libreFranklin18
     size: 18
     bpp: 8
-    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöüµ³²'
     
     
   - file:
@@ -320,7 +321,7 @@ font:
     id: libreFranklin24
     size: 24
     bpp: 8
-    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöüµ³²'
   
   - file:
       type: gfonts
@@ -329,7 +330,7 @@ font:
     id: libreFranklin20Light
     size: 20
     bpp: 8
-    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöüµ³²'
     
   - file:
       type: gfonts
@@ -338,7 +339,7 @@ font:
     id: libreFranklin25Light
     size: 25
     bpp: 8
-    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöüµ³²'
   
   - file:
       type: gfonts
@@ -347,7 +348,7 @@ font:
     id: libreFranklin32
     size: 32
     bpp: 8
-    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöüµ³²'
     
   - file:
       type: gfonts
@@ -356,4 +357,4 @@ font:
     id: libreFranklin50
     size: 50
     bpp: 8
-    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöü'
+    glyphs: '!"%()+=,-_.:°/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ abcdefghijklmnopqrstuvwxyzäöüµ³²'
