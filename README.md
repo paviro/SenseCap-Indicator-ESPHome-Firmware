@@ -132,15 +132,17 @@ To control a heating thermostat add the following block below `widgets:`.
 > [!NOTE]
 > `color`: The color that will be used for the control gauge and temperature label.  
 > `hass_climate_id`: Must be the same as within the sensor config block.  
+> `icon` (wide versions only): Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
+> `subtitle` (square version only): Subtitle shown below the sensor value.   
 > `min_value`: The minimum value that is possible to set.   
 > `max_value`: The maximum value that is possible to set.   
-> `subtitle`: Subtitle shown below the sensor value.   
 
 > [!TIP]
-> You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
+> Multiple versions of this tile are available!  
+> Besides `square.yaml` there is `wide.yaml` and `wide-half-height.yaml`.
 
 > [!WARNING]  
-> Using the wide version requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
+> Using `wide.yaml` or `wide-half-height.yaml` requires using the sensor `climate_sensor_wide.yaml` instead of `climate_sensor.yaml`!
 
 
 ### Final notes
