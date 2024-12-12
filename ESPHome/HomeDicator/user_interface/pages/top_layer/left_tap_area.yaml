@@ -1,0 +1,10 @@
+obj:
+  x: 0
+  y: 70
+  width: 20
+  height: 350
+  bg_opa: TRANSP
+  pad_all: 0
+  on_press:
+    then:
+      - script.execute: previous_page

@@ -1,28 +1,27 @@
 obj:
   x: 0
   y: 0
-  width: 480
-  height: 480
-  bg_opa: TRANSP
   pad_all: 0
+  width: 480
+  height: SIZE_CONTENT
+  bg_opa: TRANSP
   layout: 
     type: FLEX
     flex_flow: ROW
     flex_align_main: SPACE_BETWEEN
-    flex_align_cross: END
-    flex_align_track: START
+    flex_align_cross: CENTER
   widgets:
     - obj:
         bg_opa: TRANSP
-        height: 435
-        width: 20
+        height: 70
+        width: 235
         on_press:
           then:
             - script.execute: previous_page
     - obj:
         bg_opa: TRANSP
-        height: 435
-        width: 20
+        height: 70
+        width: 235
         on_press:
           then:
             - script.execute: next_page

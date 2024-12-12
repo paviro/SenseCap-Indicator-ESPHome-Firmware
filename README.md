@@ -154,7 +154,8 @@ Make sure to add your device to Home Assistant (it should be discovered automati
 > If you use tiles that control devices within Home Assistant, you will need to grant permissions for your HomeDicator, see [here](https://esphome.io/components/api.html#api-actions).
 
 > [!TIP]
-> I have not yet figured out how to do swiping gestures within ESPHome. For now, you have to click on the bottom left/right area to switch pages. Swiping there also works somewhat.
+> I have not yet figured out how to do swiping gestures within ESPHome. For now, you have to click on the bottom or top left/right area to switch pages. Swiping there also works somewhat.
+> There also is a small touch target at the sides to go to the next and previous page.
 
 > [!CAUTION]
 > I build this in my spare time as a hobby.  
