@@ -8,8 +8,8 @@ obj:
         styles: info_or_button_tile_wide
         width: 440
         height: 78
-        pad_left: 25
-        pad_right: 11
+        pad_right: 25
+        pad_left: 11
         layout: 
           type: FLEX
           flex_flow: ROW
@@ -18,23 +18,6 @@ obj:
           flex_align_track: CENTER
           pad_row: 0
         widgets:
-          - obj:
-              bg_opa: COVER
-              bg_color: ${color}
-              pad_all: 0
-              height: 52
-              width: 80
-              radius: 25
-              layout:
-                type: FLEX
-                flex_flow: COLUMN
-                flex_align_main: CENTER
-                flex_align_cross: CENTER
-                flex_align_track: CENTER
-              widgets:
-                - label:
-                    styles: info_or_button_tile_icon
-                    text: ${icon}
           - slider:
               id: lvgl_slider_${hass_climate_id}
               min_value: ${min_value}
@@ -65,12 +48,30 @@ obj:
                       id: user_is_interacting
                       value: 'false'
               on_value: !include helpers/on_value.yaml
+              
+          - obj:
+              bg_opa: COVER
+              bg_color: ${color}
+              pad_all: 0
+              height: 52
+              width: 80
+              radius: 25
+              layout:
+                type: FLEX
+                flex_flow: COLUMN
+                flex_align_main: CENTER
+                flex_align_cross: CENTER
+                flex_align_track: CENTER
+              widgets:
+                - label:
+                    styles: info_or_button_tile_icon
+                    text: ${icon}
     - obj:
         bg_opa: TRANSP
         width: SIZE_CONTENT
         height: SIZE_CONTENT
         pad_all: 0
-        x: 155
+        x: 28
         y: 23
         layout: 
           type: FLEX
