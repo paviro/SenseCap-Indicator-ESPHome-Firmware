@@ -56,6 +56,7 @@ obj:
                     text_font: libreFranklin50
                     text: "n/a"
                 - label:
+                    pad_bottom: 10
                     text_font: libreFranklin25Light
                     text: ${unit}
           - label:
