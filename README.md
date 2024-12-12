@@ -69,8 +69,7 @@ Once you have added your sensors, go to the **ADD / ADJUST YOUR PAGES HERE** sec
 A page looks like this:
 ```yaml
 - id: first_page
-  bg_color: 0x1b1b1b # PAGE BACKGROUND COLOR
-  bg_opa: COVER
+  bg_opa: TRANSP
   widgets:
     - !include
         file: HomeDicator/user_interface/templates/page_title.yaml
