@@ -34,15 +34,20 @@ api:
   encryption:
     key: ${api_key}
   on_client_connected:
-    - delay: 2s # so all sensors can load their values
-    - lvgl.widget.hide: connecting_view
+    - if:
+        condition:
+          - lambda: |-
+              return client_info.find("Home Assistant") != std::string::npos;
+        then:
+          - delay: 2s # So all sensors can load their values
+          - lvgl.widget.hide: connecting_view
   on_client_disconnected:
-    if:
-      condition:
-          not:
-            api.connected:
-      then:
-        - lvgl.widget.show: connecting_view
+    - if:
+        condition:
+          - lambda: |-
+              return client_info.find("Home Assistant") != std::string::npos;
+        then:
+          - lvgl.widget.show: connecting_view
     
 ota:
   - platform: esphome
