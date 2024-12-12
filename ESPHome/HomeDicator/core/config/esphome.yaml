@@ -26,7 +26,7 @@ esphome:
             id: lvgl_24h_clock_switch
             state:
               checked: !lambda "return id(use_24h_clock);"
-      
+              
 logger:
   level: DEBUG
   
@@ -34,6 +34,7 @@ api:
   encryption:
     key: ${api_key}
   on_client_connected:
+    - delay: 2s # so all sensors can load their values
     - lvgl.widget.hide: connecting_view
   on_client_disconnected:
     if:
