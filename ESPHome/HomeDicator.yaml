@@ -122,6 +122,7 @@ lvgl:
   # ----------------------
   # INTERNAL - DON'T TOUCH
   # ----------------------
+  gradients: !include HomeDicator/core/config/lvgl/gradients.yaml
   on_idle: !include HomeDicator/core/config/lvgl/on_idle.yaml
   top_layer: !include HomeDicator/core/config/lvgl/top_layer.yaml
   theme: !include HomeDicator/user_interface/theme/theme.yaml
