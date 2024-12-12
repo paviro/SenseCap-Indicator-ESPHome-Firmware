@@ -20,7 +20,7 @@ obj:
         text_font: libreFranklin14
         text_align: LEFT
         id: lvgl_current_time
-        text: "00:00"
+        text: "Syncing..."
       # WiFi INDICATOR
     - label:
         text_color: 0xFFFFFF

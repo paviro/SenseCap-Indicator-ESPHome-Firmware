@@ -5,8 +5,16 @@ time:
       # Update clock every minute
       - seconds: 0
         then:
-          - script.execute: update_time
+          if:
+            condition:
+              time.has_time:
+            then:
+              - script.execute: update_time
     # And on time sync
     on_time_sync:
       then:
-        - script.execute: update_time
+        if:
+          condition:
+            time.has_time:
+          then:
+            - script.execute: update_time
