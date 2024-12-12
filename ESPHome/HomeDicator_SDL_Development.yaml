@@ -1,0 +1,215 @@
+substitutions:
+  # -----------------------
+  # ADJUST DEVICE NAME HERE
+  # -----------------------
+  device_name: "homedicator_development"
+  device_friendly_name: "HomeDicator Development"
+
+  # --------------------------
+  # ENTER API AND OTA KEY HERE
+  # --------------------------
+  api_key: "<api-key>"
+  ota_key: "<ota-key>"
+
+  # ---------------------------------
+  # ADJUST TOTAL NUMBER OF PAGES HERE
+  # ---------------------------------
+  total_pages: "3" # is used to generate navigation dots and their logic (set it to your pages + 1 for the settings page)
+
+  # --------------
+  # OTHER SETTINGS
+  # --------------
+  user_interface_debug_mode: "false" # Draws borders around objects and labels for layouting
+     
+sensor:
+  # ----------------------------------------------------------------------
+  # ADD YOUR SENSORS HERE
+  # Because of the way ESPHOME works lights, thermostats, etc also go here
+  # ----------------------------------------------------------------------
+
+  - !include 
+      file: HomeDicator/core/templates/sensor.yaml
+      vars:
+        hass_sensor_id: "airgradient_schlafzimmer_temperature" # You can ommit the "sensor."
+  
+  - !include 
+      file: HomeDicator/core/templates/sensor.yaml
+      vars:
+        hass_sensor_id: "airgradient_schlafzimmer_senseair_co2_value" # You can ommit the "sensor."
+
+  - !include 
+      file: HomeDicator/core/templates/sensor.yaml
+      vars:
+        hass_sensor_id: "airgradient_schlafzimmer_particulate_matter_1_0_m_concentration" # You can ommit the "sensor."
+
+  - !include 
+      file: HomeDicator/core/templates/climate_sensor_wide.yaml
+      vars:
+        hass_climate_id: "schlafzimmer_schreibtisch" # You can ommit the "climate."
+  
+  - !include 
+      file: HomeDicator/core/templates/climate_sensor.yaml
+      vars:
+        hass_climate_id: "wohnzimmer_fenster_links" # You can ommit the "climate."
+
+  - !include 
+      file: HomeDicator/core/templates/climate_sensor.yaml
+      vars:
+        hass_climate_id: "kuche" # You can ommit the "climate."
+
+  - !include 
+      file: HomeDicator/core/templates/climate_sensor_wide.yaml
+      vars:
+        hass_climate_id: "badezimmer_fenster" # You can ommit the "climate."
+
+  
+
+binary_sensor:
+  # ---------------------
+  # ADD YOUR SENSORS HERE
+  # ---------------------
+
+
+  # ----------------------------
+  # INTERNAL SENSORS DON'T TOUCH
+  # ----------------------------
+  - !include HomeDicator/core/config/binary_sensors/indicator_button.yaml
+         
+switch:
+  # ----------------------
+  # ADD YOUR SWITCHES HERE
+  # ----------------------
+
+
+  # -----------------------------
+  # INTERNAL SWITCHES DON'T TOUCH
+  # -----------------------------
+  - !include HomeDicator/core/config/switches/use_24h_clock_switch.yaml
+
+
+lvgl:  
+  pages:
+    # ----------------------------
+    # ADD / ADJUST YOUR PAGES HERE
+    # ----------------------------
+    - id: first_page
+      bg_opa: TRANSP
+      widgets:
+        - !include
+            file: HomeDicator/user_interface/templates/page_title.yaml
+            vars:
+              title: "Temperature" # CHANGE PAGE TITLE HERE
+        - obj:
+            styles: content_container
+            layout: 
+              type: FLEX
+              flex_flow: ROW_WRAP
+              flex_align_main: LV_FLEX_ALIGN_START
+              flex_align_cross: CENTER
+            widgets:
+              - !include
+                  file: HomeDicator/user_interface/templates/tiles/thermostat/wide_half_height.yaml
+                  vars:
+                    color: 0xeebf41
+                    hass_climate_id: "schlafzimmer_schreibtisch"
+                    min_value: 5
+                    max_value: 25
+                    unit: "°C"
+                    icon: "\U000F08A0"
+              - !include
+                  file: HomeDicator/user_interface/templates/tiles/thermostat/square.yaml
+                  vars:
+                    color: 0xeebf41
+                    hass_climate_id: "wohnzimmer_fenster_links"
+                    min_value: 5
+                    max_value: 25
+                    unit: "°C"
+                    title: "Living Room"
+              - !include
+                  file: HomeDicator/user_interface/templates/tiles/thermostat/square.yaml
+                  vars:
+                    color: 0xeebf41
+                    hass_climate_id: "kuche"
+                    min_value: 5
+                    max_value: 25
+                    unit: "°C"
+                    title: "Kittchen"
+              - !include
+                  file: HomeDicator/user_interface/templates/tiles/thermostat/wide_half_height.yaml
+                  vars:
+                    color: 0xeebf41
+                    hass_climate_id: "badezimmer_fenster"
+                    min_value: 5
+                    max_value: 25
+                    unit: "°C"
+                    icon: "\U000F1819"
+    - id: second_page
+      bg_opa: TRANSP
+      widgets:
+        - !include
+            file: HomeDicator/user_interface/templates/page_title.yaml
+            vars:
+              title: "Sensors" # CHANGE PAGE TITLE HERE
+        - obj:
+            styles: content_container
+            layout: 
+              type: FLEX
+              flex_flow: ROW_WRAP
+              flex_align_main: LV_FLEX_ALIGN_START
+              flex_align_cross: CENTER
+            widgets:
+              - !include
+                  file: HomeDicator/user_interface/templates/tiles/sensor/square.yaml
+                  vars:
+                    color: 0xeebf41
+                    hass_sensor_id: "airgradient_schlafzimmer_temperature"
+                    icon: "\U000F0F55"
+                    unit: "°C"
+                    title: "Bedroom"
+              - !include
+                  file: HomeDicator/user_interface/templates/tiles/sensor/square.yaml
+                  vars:
+                    color: 0xeebf41
+                    hass_sensor_id: "airgradient_schlafzimmer_senseair_co2_value"
+                    icon: "\U000F07E4"
+                    unit: "ppm"
+                    title: "Bedroom"
+              - !include
+                  file: HomeDicator/user_interface/templates/tiles/sensor/wide.yaml
+                  vars:
+                    color: 0xeebf41
+                    hass_sensor_id: "airgradient_schlafzimmer_particulate_matter_1_0_m_concentration"
+                    icon: "\U000F013B"
+                    unit: "µg/m³"
+                    title: "Bedroom"
+              
+
+
+   # ---------------------------
+   # SETTINGS PAGE - DON'T TOUCH
+   # ---------------------------
+    - !include HomeDicator/user_interface/pages/settings.yaml
+
+
+  # ----------------------
+  # INTERNAL - DON'T TOUCH
+  # ----------------------
+  disp_bg_color: 0x1b1b1b
+  gradients: !include HomeDicator/core/config/lvgl/gradients.yaml
+  on_idle: !include HomeDicator/core/config/lvgl/on_idle.yaml
+  top_layer: !include HomeDicator/user_interface/pages/top_layer/top_layer.yaml
+  theme: !include HomeDicator/user_interface/theme/theme.yaml
+  style_definitions: !include HomeDicator/user_interface/theme/style_definitions.yaml
+
+
+# ----------------------
+# INTERNAL - DON'T TOUCH
+# ----------------------
+<<: !include HomeDicator/core/config/fonts.yaml
+<<: !include HomeDicator/core/config/esphome.yaml
+<<: !include HomeDicator/core/config/hardware_development.yaml
+<<: !include HomeDicator/core/config/scripts.yaml
+<<: !include HomeDicator/core/config/light.yaml
+<<: !include HomeDicator/core/config/time.yaml
+<<: !include HomeDicator/core/config/select.yaml
+<<: !include HomeDicator/core/config/globals.yaml
