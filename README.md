@@ -161,3 +161,9 @@ Make sure to add your device to Home Assistant (it should be discovered automati
 > I build this in my spare time as a hobby.  
 > In general, I make no guarantees that it will work forever, even though I intend to keep maintaining it, but sometimes other things are more important.  
 > **I also give no guarantees that updates here will not break existing configurations and require a new configuration - especially now in the early stages this will definitely happen!**
+
+## Development
+You can run version of this firmware using SDL on your development machine using the `HomeDicator_SDL_Development.yaml` file.  
+
+1. Follow [these](https://esphome.io/guides/installing_esphome.html) instructions to install ESPHome on your computer.
+2. Run the firmware using `esphome run HomeDicator_SDL_Development.yaml`
