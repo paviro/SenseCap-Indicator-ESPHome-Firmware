@@ -4,7 +4,7 @@ globals:
     restore_value: no
     initial_value: "0"
   - id: pager_dots
-    type: int[${total_pages}]
+    type: lv_obj_t*[${total_pages}]
     restore_value: no
   - id: user_is_interacting
     type: bool

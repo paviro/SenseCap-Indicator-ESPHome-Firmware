@@ -33,7 +33,7 @@ script:
             lv_obj_set_style_bg_opa(dot, LV_OPA_COVER, LV_PART_MAIN);  // Ensure the background is fully opaque
             lv_obj_set_style_border_width(dot, 0, LV_PART_MAIN);  // Disable borders
             lv_obj_set_style_border_color(dot, lv_color_hex(0x000000), LV_PART_MAIN);  // Set border color to black (doesn't matter since width is 0)
-            id(pager_dots)[i] = (int) dot;  // Store the dot reference
+            id(pager_dots)[i] = dot;  // Store the dot reference
           }
   
   - id: next_page
@@ -48,7 +48,7 @@ script:
           time: 150ms
       - lambda: |-
           for (int i = 0; i < ${total_pages}; i++) {
-            lv_obj_t* dot = (lv_obj_t*) id(pager_dots)[i];
+            lv_obj_t* dot = id(pager_dots)[i];
             lv_obj_set_style_bg_color(dot, (i == id(current_page)) ? lv_color_hex(0xffffff) : lv_color_hex(0x626262), LV_PART_MAIN);  // Active color is white, inactive is gray
           }
   
@@ -64,7 +64,7 @@ script:
           time: 150ms
       - lambda: |-
           for (int i = 0; i < ${total_pages}; i++) {
-            lv_obj_t* dot = (lv_obj_t*) id(pager_dots)[i];
+            lv_obj_t* dot = id(pager_dots)[i];
             lv_obj_set_style_bg_color(dot, (i == id(current_page)) ? lv_color_hex(0xffffff) : lv_color_hex(0x626262), LV_PART_MAIN);  // Active color is white, inactive is gray
           }
   
