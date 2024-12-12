@@ -18,7 +18,7 @@ obj:
           - label:
               text_font: libreFranklin18
               text_color: 0xffffff
-              text: ${subtitle}
+              text: ${title}
               pad_top: 18
               pad_bottom: 10
           - slider:

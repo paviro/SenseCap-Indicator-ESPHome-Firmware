@@ -101,7 +101,7 @@ lvgl:
                     hass_sensor_id: "example_sensor_id_change_me"
                     icon: "\U000F02E3"
                     unit: "°C"
-                    subtitle: "Bedroom"
+                    title: "Bedroom"
               - !include
                   file: sensecap-indicator/user_interface/templates/tiles/thermostat/square.yaml
                   vars:
@@ -109,7 +109,7 @@ lvgl:
                     hass_climate_id: "example_climate_id_change_me"
                     min_value: 5
                     max_value: 25
-                    subtitle: "Living Room"
+                    title: "Living Room"
    
 
 

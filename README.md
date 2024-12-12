@@ -103,7 +103,7 @@ To show a numeric sensor value add the following block below `widgets:`.
       hass_sensor_id: "airgradient_schlafzimmer_temperature"
       icon: "\U000F02E3"
       unit: "°C"
-      subtitle: "Bedroom"
+      title: "Bedroom"
 ```	
 
 > [!TIP]
@@ -114,7 +114,7 @@ To show a numeric sensor value add the following block below `widgets:`.
 > `hass_sensor_id`: Must be the same as within the sensor config block.  
 > `icon`: Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
 > `unit`: Unit of the sensor.  
-> `subtitle`: Subtitle shown below the sensor value.
+> `title`: Title shown below the sensor value.
 
 #### Thermostat tile
 To control a heating thermostat add the following block below `widgets:`.  
@@ -126,14 +126,14 @@ To control a heating thermostat add the following block below `widgets:`.
       hass_climate_id: "schlafzimmer_schreibtisch"
       min_value: 5
       max_value: 25
-      subtitle: "Living Room"
+      title: "Living Room"
 ```
 
 > [!NOTE]
 > `color`: The color that will be used for the control gauge and temperature label.  
 > `hass_climate_id`: Must be the same as within the sensor config block.  
 > `icon` (wide versions only): Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/sensecap-indicator/core/config/fonts.yaml) for icons that are available.  
-> `subtitle` (square version only): Subtitle shown below the sensor value.   
+> `title` (square version only): Title shown below the sensor value.   
 > `min_value`: The minimum value that is possible to set.   
 > `max_value`: The maximum value that is possible to set.   
 

@@ -60,5 +60,5 @@ obj:
                     text: ${unit}
           - label:
               styles: info_or_button_tile_subtitle
-              text: ${subtitle}
+              text: ${title}
               text_font: libreFranklin10

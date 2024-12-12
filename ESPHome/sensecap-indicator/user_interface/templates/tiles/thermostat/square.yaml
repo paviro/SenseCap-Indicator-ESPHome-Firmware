@@ -56,7 +56,7 @@ obj:
                 - label:
                     text_align: CENTER
                     styles: info_or_button_tile_subtitle
-                    text: ${subtitle}
+                    text: ${title}
                     text_font: libreFranklin10
           - obj:
               width: 205
