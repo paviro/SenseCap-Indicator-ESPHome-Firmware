@@ -28,7 +28,7 @@ esphome:
               checked: !lambda "return id(use_24h_clock);"
               
 logger:
-  level: DEBUG
+  level: INFO
   
 api:
   encryption:
@@ -51,3 +51,5 @@ ota:
 wifi:
   ssid: ${wifi_ssid}
   password: ${wifi_password}
+  
+bluetooth_proxy:
