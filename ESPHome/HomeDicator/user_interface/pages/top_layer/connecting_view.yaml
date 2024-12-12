@@ -45,7 +45,7 @@ obj:
               pad_row: 0
         widgets:
               - label:
-                    pad_bottom: 10
-                    text_font: libreFranklin20Light
-                    text_color: 0xffffff
+                    pad_bottom: 20
+                    text_font: libreFranklin18
+                    text_color: 0xa6a6a6
                     text: "Connecting..."
