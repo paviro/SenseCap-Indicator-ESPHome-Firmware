@@ -2,14 +2,13 @@ substitutions:
   # -----------------------
   # ADJUST DEVICE NAME HERE
   # -----------------------
-  device_name: "homedicator_development"
+  device_name: "homedicator-development"
   device_friendly_name: "HomeDicator Development"
 
-  # --------------------------
-  # ENTER API AND OTA KEY HERE
-  # --------------------------
+  # --------------
+  # ENTER API HERE
+  # --------------
   api_key: "<api-key>"
-  ota_key: "<ota-key>"
 
   # ---------------------------------
   # ADJUST TOTAL NUMBER OF PAGES HERE
