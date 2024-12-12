@@ -110,7 +110,7 @@ To show a numeric sensor value add the following block below `widgets:`.
 > You can change `square.yaml` to `wide.yaml` for a tile version that is wide instead of square.  
 
 > [!NOTE]
-> `color`: The color that will be used for the icon and value label.
+> `color`: The color that will be used for the icon and value label.  
 > `hass_sensor_id`: Must be the same as within the sensor config block.  
 > `icon`: Unicode codepoint of the icon you want to use. See [here](https://github.com/paviro/HomeDicator/blob/main/ESPHome/HomeDicator/core/config/fonts.yaml) for icons that are available.  
 > `unit`: Unit of the sensor.  
