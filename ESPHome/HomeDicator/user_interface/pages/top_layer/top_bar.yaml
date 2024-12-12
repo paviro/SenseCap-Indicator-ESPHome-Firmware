@@ -27,4 +27,4 @@ obj:
         text_font: icons24
         text_align: RIGHT
         id: lvgl_wifi_signal_icon
-        text: "\U000F092F"
+        text: "\U000F092E"

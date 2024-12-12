@@ -262,6 +262,7 @@ font:
     size: 24
     bpp: 8
     glyphs: [
+      "\U000F092E",  # mdi:wifi-strength-off-outline
       "\U000F092F",  # mdi:wifi-strength-outline
       "\U000F091F",  # mdi:wifi-strength-1
       "\U000F0922",  # mdi:wifi-strength-2
