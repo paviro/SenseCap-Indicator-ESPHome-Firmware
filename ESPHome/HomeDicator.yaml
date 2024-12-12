@@ -124,7 +124,7 @@ lvgl:
   # ----------------------
   gradients: !include HomeDicator/core/config/lvgl/gradients.yaml
   on_idle: !include HomeDicator/core/config/lvgl/on_idle.yaml
-  top_layer: !include HomeDicator/core/config/lvgl/top_layer.yaml
+  top_layer: !include HomeDicator/user_interface/pages/top_layer/top_layer.yaml
   theme: !include HomeDicator/user_interface/theme/theme.yaml
   style_definitions: !include HomeDicator/user_interface/theme/style_definitions.yaml
 

@@ -1,26 +1,51 @@
 obj:
-      id: connecting_view
-      x: 0
-      y: 0
-      width: 480
-      height: 480
-      bg_color: 0x1b1b1b
-      layout:
-            type: FLEX
-            flex_flow: COLUMN
-            flex_align_main: CENTER
-            flex_align_cross: CENTER
-            flex_align_track: CENTER
-            pad_row: 0
-      widgets:
-            - spinner:
-                  width: 100
-                  arc_width: 15
-                  indicator:
-                        arc_width: 15
-                  arc_length: 40
-                  spin_time: 2s
-            - label:
-                  text_font: libreFranklin24
-                  text_color: 0xffffff
-                  text: "Connecting"
+  id: connecting_view
+  width: SIZE_CONTENT
+  height: SIZE_CONTENT
+  bg_color: 0x1b1b1b
+  pad_all: 0
+  widgets:
+    - obj:
+        x: 0
+        y: 0
+        width: 480
+        height: 480
+        bg_opa: TRANSP
+        pad_all: 0
+        layout:
+              type: FLEX
+              flex_flow: ROW
+              flex_align_main: CENTER
+              flex_align_cross: CENTER
+              flex_align_track: CENTER
+              pad_row: 0
+        widgets:
+              - spinner:
+                    width: 100
+                    arc_width: 15
+                    indicator:
+                          arc_width: 15
+                          arc_color: 0x92ae67
+                    arc_length: 40
+                    spin_time: 2s
+                    arc_color: 0x474747
+    - obj:
+        x: 0
+        y: 0
+        width: 480
+        height: 480
+        bg_opa: TRANSP
+        pad_all: 0
+        layout:
+              type: FLEX
+              flex_flow: COLUMN
+              flex_align_main: END
+              flex_align_cross: CENTER
+              flex_align_track: CENTER
+              pad_row: 0
+        widgets:
+              - label:
+                    pad_bottom: 10
+                    text_font: libreFranklin20Light
+                    text_color: 0xffffff
+                    text: "Connecting..."
