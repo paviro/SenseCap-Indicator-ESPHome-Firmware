@@ -1,0 +1,8 @@
+scrollable: false
+widgets:
+      # TOP BAR
+      - !include top_bar.yaml
+      - !include bottom_pager.yaml
+      - !include bottom_pager_tap_area.yaml
+      - !include connecting_view.yaml
+                  

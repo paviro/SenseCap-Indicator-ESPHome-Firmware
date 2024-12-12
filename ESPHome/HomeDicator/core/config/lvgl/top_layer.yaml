@@ -1,6 +1,0 @@
-scrollable: false
-widgets:
-      # TOP BAR
-      - !include ../../../user_interface/templates/top_bar.yaml
-      - !include ../../../user_interface/templates/bottom_pager.yaml
-      - !include ../../../user_interface/templates/bottom_pager_tap_area.yaml

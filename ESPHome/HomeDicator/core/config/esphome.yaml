@@ -33,6 +33,15 @@ logger:
 api:
   encryption:
     key: ${api_key}
+  on_client_connected:
+    - lvgl.widget.hide: connecting_view
+  on_client_disconnected:
+    if:
+      condition:
+          not:
+            api.connected:
+      then:
+        - lvgl.widget.show: connecting_view
     
 ota:
   - platform: esphome
