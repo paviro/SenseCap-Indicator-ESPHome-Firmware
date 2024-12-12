@@ -1,0 +1,10 @@
+button:
+  - platform: restart
+    name: "Restart"
+    entity_category: config
+  - platform: safe_mode
+    name: "Restart (Safe Mode)"
+    entity_category: config
+  - platform: shutdown
+    name: "Shutdown"
+    entity_category: config
