@@ -1,0 +1,21 @@
+host:
+
+output:
+  - platform: template
+    id: ledc_gpio45
+    type: float
+    write_action:
+      - logger.log: "Backlight output changed!"
+    
+touchscreen:
+  - platform: sdl
+    id: development_touchscreen
+    
+display:
+  - platform: sdl
+    id: development_display
+    show_test_card: true
+    auto_clear_enabled: false
+    dimensions:
+      width: 480
+      height: 480
