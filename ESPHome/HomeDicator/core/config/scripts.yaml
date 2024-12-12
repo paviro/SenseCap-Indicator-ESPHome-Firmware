@@ -45,7 +45,7 @@ script:
             return (next_page >= ${total_pages}) ? 0 : next_page;  // Loop back to 0 if exceeding the total pages
       - lvgl.page.next:
           animation: OUT_LEFT
-          time: 500ms
+          time: 100ms
       - lambda: |-
           for (int i = 0; i < ${total_pages}; i++) {
             lv_obj_t* dot = (lv_obj_t*) id(pager_dots)[i];
@@ -61,7 +61,7 @@ script:
             return (prev_page < 0) ? ${total_pages} - 1 : prev_page;  // Loop back to max page if going below 0
       - lvgl.page.previous:
           animation: OUT_RIGHT
-          time: 500ms
+          time: 100ms
       - lambda: |-
           for (int i = 0; i < ${total_pages}; i++) {
             lv_obj_t* dot = (lv_obj_t*) id(pager_dots)[i];
