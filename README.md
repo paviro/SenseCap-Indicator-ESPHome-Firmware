@@ -1,11 +1,13 @@
 <div align="center">
+<img src="https://github.com/user-attachments/assets/ae745780-2d19-4832-a5f2-93599259db16" width=400>
 	
 # HomeDicator
 ###### A customisable [SenseCap Indicator](https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html) Firmware using ESPHome. Design inspired by the [official example project](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_ha). 
-	
+
+
 </div>
 
-<img src="https://github.com/user-attachments/assets/26c4d5cb-5603-4b71-8b99-abd1e50c7ae4">
+
 
 
 ## Features
@@ -24,6 +26,9 @@
 	- Switch tiles
 	- Button tiles
 - Thermostat view (that can be linked to a tile showing the current temperature and opens on click)
+
+## Usage video
+https://github.com/user-attachments/assets/9b2b40b6-c974-4bb2-97ca-c21715880793
 
 ## Screenshots
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
