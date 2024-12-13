@@ -5,7 +5,7 @@
 	
 </div>
 
-<img src="./.assets/cover_image.jpg">
+<img src="https://github.com/user-attachments/assets/26c4d5cb-5603-4b71-8b99-abd1e50c7ae4">
 
 
 ## Features
