@@ -27,11 +27,11 @@
 
 ## Screenshots
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-  <img src="https://github.com/user-attachments/assets/00b30072-9272-416b-a0bd-4d610479d201" style="width: 320px; height: auto;">
-  <img src="https://github.com/user-attachments/assets/d19bd33c-89df-4ffd-bb48-72bd33c0c0b2" style="width: 320px; height: auto;">
-  <img src="https://github.com/user-attachments/assets/087f7396-23f0-42d0-b85e-647cc0fcd3fb" style="width: 320px; height: auto;">
-  <img src="https://github.com/user-attachments/assets/a10bd867-beb5-48ae-b993-c436f5b53a09" style="width: 320px; height: auto;">
-  <img src="https://github.com/user-attachments/assets/295b1faf-0232-4c27-83a4-c777287df3dc" style="width: 320px; height: auto;">
+  <img src="https://github.com/user-attachments/assets/00b30072-9272-416b-a0bd-4d610479d201" style="width: 250px; height: auto;">
+  <img src="https://github.com/user-attachments/assets/d19bd33c-89df-4ffd-bb48-72bd33c0c0b2" style="width: 250px; height: auto;">
+  <img src="https://github.com/user-attachments/assets/087f7396-23f0-42d0-b85e-647cc0fcd3fb" style="width: 250px; height: auto;">
+  <img src="https://github.com/user-attachments/assets/a10bd867-beb5-48ae-b993-c436f5b53a09" style="width: 250px; height: auto;">
+  <img src="https://github.com/user-attachments/assets/295b1faf-0232-4c27-83a4-c777287df3dc" style="width: 250px; height: auto;">
 </div>
 
 ## Configuration
