@@ -1,0 +1,49 @@
+---
+sensor:
+  # ----------------------------
+  # INTERNAL SENSORS DON'T TOUCH
+  # ----------------------------
+  - !include ../core/config/common/sensors/wifi_signal.yaml
+  - !include ../core/config/common/sensors/wifi_signal_percent.yaml
+
+binary_sensor:
+  # ----------------------------
+  # INTERNAL SENSORS DON'T TOUCH
+  # ----------------------------
+  - !include ../core/config/common/binary_sensors/indicator_button.yaml
+         
+switch:
+  # -----------------------------
+  # INTERNAL SWITCHES DON'T TOUCH
+  # -----------------------------
+  - !include ../core/config/common/switches/use_24h_clock_switch.yaml
+
+lvgl:
+  pages:
+   # ---------------------------
+   # SETTINGS PAGE - DON'T TOUCH
+   # ---------------------------
+    - !include ../user_interface/pages/settings.yaml
+
+  # ----------------------
+  # INTERNAL - DON'T TOUCH
+  # ----------------------
+  disp_bg_color: 0x1b1b1b
+  gradients: !include ../core/config/common/lvgl/gradients.yaml
+  on_idle: !include ../core/config/common/lvgl/on_idle.yaml
+  top_layer: !include ../user_interface/pages/top_layer/top_layer.yaml
+  theme: !include ../user_interface/theme/theme.yaml
+  style_definitions: !include ../user_interface/theme/style_definitions.yaml
+
+# ----------------------
+# INTERNAL - DON'T TOUCH
+# ----------------------
+<<: !include ../core/config/common/fonts.yaml
+<<: !include ../core/config/common/esphome.yaml
+<<: !include ../core/config/device/seeed-sensecap-indicator/hardware.yaml
+<<: !include ../core/config/common/scripts.yaml
+<<: !include ../core/config/common/light.yaml
+<<: !include ../core/config/common/time.yaml
+<<: !include ../core/config/common/select.yaml
+<<: !include ../core/config/common/globals.yaml
+

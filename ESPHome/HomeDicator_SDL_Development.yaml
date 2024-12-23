@@ -8,7 +8,7 @@ substitutions:
   # --------------
   # ENTER API HERE
   # --------------
-  api_key: "<api-key>"
+  api_key: "9K+2sGlXoo5DclPCjq/QMBmug9ozo3i28hhUy+6nIeo="
 
   # ---------------------------------
   # ADJUST TOTAL NUMBER OF PAGES HERE
@@ -21,7 +21,7 @@ substitutions:
   user_interface_debug_mode: "false" # Draws borders around objects and labels for layouting
   
 packages:
-  HomeDicator: !include HomeDicator/core_sdl.yaml
+  HomeDicator: !include HomeDicator/device/sdl.yaml
   
 sensor:
   # -----------------------------------------------------------------------

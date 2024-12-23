@@ -29,7 +29,7 @@ substitutions:
   user_interface_debug_mode: "false" # Draws borders around objects and labels for layouting
 
 packages:
-  HomeDicator: !include HomeDicator/core.yaml
+  HomeDicator: !include HomeDicator/device/seeed-sensecap-indicator.yaml
 
 sensor:
   # ----------------------------------------------------------------------
