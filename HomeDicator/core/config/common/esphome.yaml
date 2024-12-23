@@ -2,8 +2,8 @@ esphome:
   name: ${device_name}
   friendly_name: ${device_friendly_name}
   project:
-    name: "paulvincentroll.SenseCAP_Indicator_Firmware"
-    version: "0.1"
+    name: "paulvincentroll.HomeDicator"
+    version: ${homedicator_core_version_tag}
     
   includes:
     - HomeDicator/core/helpers/adjust_color.h
