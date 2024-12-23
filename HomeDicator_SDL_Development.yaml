@@ -8,7 +8,7 @@ substitutions:
   # --------------
   # ENTER API HERE
   # --------------
-  api_key: "9K+2sGlXoo5DclPCjq/QMBmug9ozo3i28hhUy+6nIeo="
+  api_key: "<api-key>"
 
   # ---------------------------------
   # ADJUST TOTAL NUMBER OF PAGES HERE
