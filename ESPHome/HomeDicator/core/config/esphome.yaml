@@ -15,6 +15,11 @@ esphome:
     - priority: 800.0
       then:
         - script.execute: create_pager_dots
+    - priority: 250.0
+      then:
+        # Using ESPhome packages will cause the settings page to be the first one, lvgl.page.next will make it look like the last one again.
+        - lvgl.page.next:
+            animation: NONE
     - priority: 200.0
       then:
         - select.set_index:
