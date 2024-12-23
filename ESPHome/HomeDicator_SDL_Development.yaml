@@ -22,7 +22,7 @@ substitutions:
   
 packages:
   HomeDicator: !include HomeDicator/device/sdl.yaml
-
+  
 sensor:
   # -----------------------------------------------------------------------
   # ADD YOUR SENSORS HERE
