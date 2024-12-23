@@ -5,9 +5,10 @@ substitutions:
   device_name: "homedicator"
   device_friendly_name: "HomeDicator"
 
-  # --------------------------
+  # ---------------------------------------------------------------------------------
   # ENTER API AND OTA KEY HERE
-  # --------------------------
+  # Add the keys to your secret file or change them here if you want individual keys.
+  # ---------------------------------------------------------------------------------
   api_key: !secret api_encryption_key
   ota_key: !secret ota_password
 
