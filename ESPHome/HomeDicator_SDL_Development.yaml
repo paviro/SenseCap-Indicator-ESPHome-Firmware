@@ -19,12 +19,16 @@ substitutions:
   # OTHER SETTINGS
   # --------------
   user_interface_debug_mode: "false" # Draws borders around objects and labels for layouting
-     
+  
+packages:
+  HomeDicator: !include HomeDicator/core_sdl.yaml
+  
 sensor:
-  # ----------------------------------------------------------------------
+  # -----------------------------------------------------------------------
   # ADD YOUR SENSORS HERE
   # Because of the way ESPHOME works lights, thermostats, etc also go here
-  # ----------------------------------------------------------------------
+  # They need to be included here in order for the display to update values.
+  # -----------------------------------------------------------------------
 
   - !include 
       file: HomeDicator/core/templates/sensor.yaml
@@ -68,22 +72,12 @@ binary_sensor:
   # ADD YOUR SENSORS HERE
   # ---------------------
 
-
-  # ----------------------------
-  # INTERNAL SENSORS DON'T TOUCH
-  # ----------------------------
-  - !include HomeDicator/core/config/binary_sensors/indicator_button.yaml
          
 switch:
   # ----------------------
   # ADD YOUR SWITCHES HERE
   # ----------------------
 
-
-  # -----------------------------
-  # INTERNAL SWITCHES DON'T TOUCH
-  # -----------------------------
-  - !include HomeDicator/core/config/switches/use_24h_clock_switch.yaml
 
 
 lvgl:  
@@ -181,34 +175,3 @@ lvgl:
                     icon: "\U000F013B"
                     unit: "µg/m³"
                     title: "Bedroom"
-              
-
-
-   # ---------------------------
-   # SETTINGS PAGE - DON'T TOUCH
-   # ---------------------------
-    - !include HomeDicator/user_interface/pages/settings.yaml
-
-
-  # ----------------------
-  # INTERNAL - DON'T TOUCH
-  # ----------------------
-  disp_bg_color: 0x1b1b1b
-  gradients: !include HomeDicator/core/config/lvgl/gradients.yaml
-  on_idle: !include HomeDicator/core/config/lvgl/on_idle.yaml
-  top_layer: !include HomeDicator/user_interface/pages/top_layer/top_layer.yaml
-  theme: !include HomeDicator/user_interface/theme/theme.yaml
-  style_definitions: !include HomeDicator/user_interface/theme/style_definitions.yaml
-
-
-# ----------------------
-# INTERNAL - DON'T TOUCH
-# ----------------------
-<<: !include HomeDicator/core/config/fonts.yaml
-<<: !include HomeDicator/core/config/esphome.yaml
-<<: !include HomeDicator/core/config/hardware_development.yaml
-<<: !include HomeDicator/core/config/scripts.yaml
-<<: !include HomeDicator/core/config/light.yaml
-<<: !include HomeDicator/core/config/time.yaml
-<<: !include HomeDicator/core/config/select.yaml
-<<: !include HomeDicator/core/config/globals.yaml
