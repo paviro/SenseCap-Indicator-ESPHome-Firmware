@@ -6,4 +6,5 @@ We will be able to fetch this package automatically once [this](https://github.c
 You can run a version of this firmware using SDL on your development machine using the `HomeDicator.yaml` file.  
 
 1. Follow [these](https://esphome.io/guides/installing_esphome.html) instructions to install ESPHome on your computer.
-2. Run the firmware using `esphome run HomeDicator.yaml`
+2. Install the requirements listed [here](https://esphome.io/components/display/sdl.html).
+3. Run the firmware using `esphome run HomeDicator.yaml`
