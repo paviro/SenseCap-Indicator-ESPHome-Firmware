@@ -17,6 +17,9 @@ esphome:
         - script.execute: create_pager_dots
     - priority: 250.0
       then:
+        - text_sensor.template.publish:
+            id: github_release_tag
+            state: ${homedicator_core_version_tag} # Set inital value to current version
         # Using ESPhome packages will cause the settings page to be the first one, lvgl.page.next will make it look like the last one again.
         - lvgl.page.next:
             animation: NONE
@@ -53,3 +56,4 @@ api:
               return client_info.find("Home Assistant") != std::string::npos;
         then:
           - lvgl.widget.show: connecting_view
+          

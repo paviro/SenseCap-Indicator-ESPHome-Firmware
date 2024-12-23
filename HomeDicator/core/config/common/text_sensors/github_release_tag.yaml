@@ -1,0 +1,14 @@
+platform: template
+internal: true
+id: github_release_tag
+on_value:
+    then:
+        - if:
+            condition:
+                lambda: 'return x != "${homedicator_core_version_tag}";'
+            then:
+                - lvgl.widget.hide: homedicator_core_up_to_date_label
+                - lvgl.widget.show: homedicator_core_update_available_label
+            else:
+                - lvgl.widget.hide: homedicator_core_update_available_label
+                - lvgl.widget.show: homedicator_core_up_to_date_label

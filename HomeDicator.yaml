@@ -20,6 +20,14 @@ substitutions:
   # --------------
   user_interface_debug_mode: "false" # Draws borders around objects and labels for layouting
   
+  # ----------------------------------------------------------------------
+  # GITHUB VERSION TAG
+  # Here you can select the version of the core HomeDicator package to use
+  # Changing this might require you to update your configuration.
+  # Currently you need to manually download the files of the new version.
+  # ----------------------------------------------------------------------
+  homedicator_core_version_tag: "v0.2.0"
+  
 packages:
   HomeDicator: !include HomeDicator/device/sdl.yaml
   

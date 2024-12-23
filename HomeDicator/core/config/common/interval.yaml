@@ -1,0 +1,24 @@
+interval:
+  - interval: 15min
+    id: fetch_github_release
+    then:
+      - http_request.get:
+          url: https://api.github.com/repos/HomeDicator/ESPHome-Package/releases/latest
+          capture_response: true
+          on_response:
+            then:
+              - if:
+                  condition:
+                    lambda: return response->status_code == 200;
+                  then:
+                    - lambda: |-
+                        json::parse_json(body, [](JsonObject root) -> bool {
+                          if (root.containsKey("tag_name")) {
+                              std::string tag_name = root["tag_name"].as<std::string>();
+                              id(github_release_tag).publish_state(tag_name);
+                              ESP_LOGI("main", "GitHub Release Tag: %s", tag_name.c_str());
+                          } else {
+                            ESP_LOGW("main", "No 'tag_name' key in the JSON response!");
+                          }
+                          return true;
+                        });

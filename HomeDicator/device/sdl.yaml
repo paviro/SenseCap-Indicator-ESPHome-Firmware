@@ -5,4 +5,9 @@ sensor:
   - id: !remove wifi_signal_db
   - id: !remove wifi_signal_percent
   
+interval:
+  - id: !remove fetch_github_release
+  
+http_request: !remove
+  
 <<: !include ../core/config/device/sdl/hardware.yaml

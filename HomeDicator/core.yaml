@@ -2,6 +2,9 @@
 sensor:
   - !include core/config/common/sensors/wifi_signal.yaml
   - !include core/config/common/sensors/wifi_signal_percent.yaml
+  
+text_sensor:
+  - !include core/config/common/text_sensors/github_release_tag.yaml
 
 binary_sensor:
   - !include core/config/common/binary_sensors/indicator_button.yaml
@@ -27,4 +30,5 @@ lvgl:
 <<: !include core/config/common/time.yaml
 <<: !include core/config/common/select.yaml
 <<: !include core/config/common/globals.yaml
-
+<<: !include core/config/common/http_request.yaml
+<<: !include core/config/common/interval.yaml
