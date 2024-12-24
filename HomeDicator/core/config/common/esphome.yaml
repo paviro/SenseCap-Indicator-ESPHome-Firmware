@@ -4,13 +4,13 @@ esphome:
   project:
     name: "paulvincentroll.HomeDicator"
     version: ${homedicator_core_version_tag}
-    
+
   includes:
     - HomeDicator/core/helpers/adjust_color.h
 
   platformio_options:
     build_unflags: -Werror=all
-  
+
   on_boot:
     - priority: 800.0
       then:
@@ -37,7 +37,7 @@ esphome:
 
 logger:
   level: INFO
-  
+
 api:
   encryption:
     key: ${api_key}
@@ -56,4 +56,3 @@ api:
               return client_info.find("Home Assistant") != std::string::npos;
         then:
           - lvgl.widget.show: connecting_view
-          

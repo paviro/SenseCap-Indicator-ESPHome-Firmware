@@ -1,6 +1,6 @@
 obj:
   styles: info_or_button_tile
-  layout: 
+  layout:
     type: FLEX
     flex_flow: COLUMN
     flex_align_main: CENTER
@@ -28,7 +28,7 @@ obj:
     - obj:
         styles: info_or_button_tile_info
         width: SIZE_CONTENT
-        layout: 
+        layout:
           type: FLEX
           flex_flow: ROW
           flex_align_main: CENTER

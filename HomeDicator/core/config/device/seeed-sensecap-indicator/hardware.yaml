@@ -16,31 +16,31 @@ esp32:
 psram:
   mode: octal
   speed: 80MHz
-  
+
 output:
   - platform: ledc
-    pin: 
+    pin:
       number: GPIO45
       ignore_strapping_warning: true
     id: ledc_gpio45
     frequency: 100Hz
-    
+
 i2c:
   - id: bus_a
     sda: GPIO39
     scl: GPIO40
     scan: false
-    
+
 spi:
   - id: lcd_spi
     clk_pin: GPIO41
     mosi_pin: GPIO48
-    
+
 pca9554:
   - id: pca9554a_device
     address: 0x20
     pin_count: 16
-    
+
 touchscreen:
   platform: ft5x06
   id: sensecap_touchscreen
@@ -49,7 +49,7 @@ touchscreen:
     mirror_y: true
   on_release:
     - script.execute: activity_detected
-    
+
 display:
   - platform: st7701s
     id: sensecap_display
@@ -99,13 +99,13 @@ display:
         - GPIO13        #b3
         - GPIO12        #b4
         - GPIO11        #b5
-        
+
 bluetooth_proxy:
-        
+
 ota:
   - platform: esphome
     password: ${ota_key}
-    
+
 wifi:
   ssid: ${wifi_ssid}
   password: ${wifi_password}
@@ -113,4 +113,3 @@ wifi:
       - lvgl.label.update:
           id: lvgl_wifi_signal_icon
           text: "\U000F092E"
-          

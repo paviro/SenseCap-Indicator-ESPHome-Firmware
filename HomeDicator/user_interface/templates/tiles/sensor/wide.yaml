@@ -1,7 +1,7 @@
 obj:
   styles: info_or_button_tile_wide
   width: 440
-  layout: 
+  layout:
     type: FLEX
     flex_flow: ROW
     flex_align_main: SPACE_EVENLY
@@ -44,7 +44,7 @@ obj:
               height: SIZE_CONTENT
               styles: info_or_button_tile_info
               pad_top: 0
-              layout: 
+              layout:
                 type: FLEX
                 flex_flow: ROW
                 flex_align_main: CENTER
