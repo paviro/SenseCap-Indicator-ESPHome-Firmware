@@ -9,5 +9,6 @@ obj:
     then:
       - script.execute: show_page_control_elements
       - lvgl.page.show:
-          animation: MOVE_RIGHT
           id: ${previous_page_id}
+          animation: MOVE_RIGHT
+          time: ${page_transition_time}
