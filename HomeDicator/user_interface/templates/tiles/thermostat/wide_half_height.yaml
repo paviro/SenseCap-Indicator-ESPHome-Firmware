@@ -10,7 +10,7 @@ obj:
         height: 78
         pad_left: 25
         pad_right: 11
-        layout: 
+        layout:
           type: FLEX
           flex_flow: ROW
           flex_align_main: SPACE_BETWEEN
@@ -72,7 +72,7 @@ obj:
         pad_all: 0
         x: 155
         y: 23
-        layout: 
+        layout:
           type: FLEX
           flex_flow: ROW
           flex_align_main: CENTER
@@ -89,4 +89,3 @@ obj:
               text_font: libreFranklin20Light
               text_color: 0xffffff
               text: "${unit}"
-    

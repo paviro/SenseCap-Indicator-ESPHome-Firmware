@@ -2,17 +2,16 @@ scrollable: false
 widgets:
       # BOTTOM DOTS
       - !include bottom_pager.yaml
-      
+
       # TAP AREAS
       - !include bottom_pager_tap_area.yaml
       - !include left_tap_area.yaml
       - !include right_tap_area.yaml
       - !include top_tap_area.yaml
-      
+
       # CONNECTION VIEW
       - !include connecting_view.yaml
-      
+
       # TIME AND WIFI STATUS
       - !include time.yaml
       - !include wifi.yaml
-                  

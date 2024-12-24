@@ -6,7 +6,7 @@ obj:
   width: 480
   height: SIZE_CONTENT
   bg_opa: TRANSP
-  layout: 
+  layout:
     type: FLEX
     flex_flow: ROW
     flex_align_main: CENTER

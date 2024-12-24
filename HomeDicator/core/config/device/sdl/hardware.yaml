@@ -6,11 +6,11 @@ output:
     type: float
     write_action:
       - logger.log: "Backlight output changed!"
-    
+
 touchscreen:
   - platform: sdl
     id: development_touchscreen
-    
+
 display:
   - platform: sdl
     id: development_display
