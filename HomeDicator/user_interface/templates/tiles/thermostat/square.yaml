@@ -74,6 +74,8 @@ obj:
               widgets:
                 - arc:
                     id: lvgl_arc_${hass_climate_id}
+                    state:
+                      disabled: true
                     pad_all: 0
                     adjustable: true
                     min_value: ${min_value}
