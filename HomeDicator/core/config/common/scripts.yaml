@@ -7,7 +7,7 @@ script:
           then:
             - lvgl.label.update:
                 id: lvgl_current_time
-                text: 
+                text:
                   format: "%02d:%02d"
                   args: [ 'id(homeassistant_time).now().hour', 'id(homeassistant_time).now().minute' ]
           else:
@@ -20,8 +20,23 @@ script:
                   static char time_text[10];
                   snprintf(time_text, sizeof(time_text), "%d:%02d %s", hour, now.minute, am_pm);
                   return time_text;
-  
-            
+
+  - id: hide_page_control_elements
+    then:
+      - lvgl.widget.hide: top_tap_area
+      - lvgl.widget.hide: bottom_tap_area
+      - lvgl.widget.hide: left_tap_area
+      - lvgl.widget.hide: right_tap_area
+      - lvgl.widget.hide: bottom_pager
+
+  - id: show_page_control_elements
+    then:
+      - lvgl.widget.show: top_tap_area
+      - lvgl.widget.show: bottom_tap_area
+      - lvgl.widget.show: left_tap_area
+      - lvgl.widget.show: right_tap_area
+      - lvgl.widget.show: bottom_pager
+
   - id: create_pager_dots
     then:
       - lambda: |-
@@ -35,7 +50,7 @@ script:
             lv_obj_set_style_border_color(dot, lv_color_hex(0x000000), LV_PART_MAIN);  // Set border color to black (doesn't matter since width is 0)
             id(pager_dots)[i] = dot;  // Store the dot reference
           }
-  
+
   - id: next_page
     then:
       - globals.set:
@@ -51,7 +66,7 @@ script:
             lv_obj_t* dot = id(pager_dots)[i];
             lv_obj_set_style_bg_color(dot, (i == id(current_page)) ? lv_color_hex(0xffffff) : lv_color_hex(0x626262), LV_PART_MAIN);  // Active color is white, inactive is gray
           }
-  
+
   - id: previous_page
     then:
       - globals.set:
@@ -67,7 +82,7 @@ script:
             lv_obj_t* dot = id(pager_dots)[i];
             lv_obj_set_style_bg_color(dot, (i == id(current_page)) ? lv_color_hex(0xffffff) : lv_color_hex(0x626262), LV_PART_MAIN);  // Active color is white, inactive is gray
           }
-  
+
   - id: activity_timeout_reached
     then:
       - if:
@@ -83,7 +98,7 @@ script:
             - delay: 200ms
             - lvgl.pause:
                 show_snow: true
-              
+
   - id: activity_detected
     then:
       if:

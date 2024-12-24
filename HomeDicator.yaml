@@ -19,18 +19,18 @@ substitutions:
   # OTHER SETTINGS
   # --------------
   user_interface_debug_mode: "false" # Draws borders around objects and labels for layouting
-  
+
   # ----------------------------------------------------------------------
   # GITHUB VERSION TAG
   # Here you can select the version of the core HomeDicator package to use
   # Changing this might require you to update your configuration.
   # Currently you need to manually download the files of the new version.
   # ----------------------------------------------------------------------
-  homedicator_core_version_tag: "v0.2.0"
-  
+  homedicator_core_version_tag: "v0.3.0"
+
 packages:
   HomeDicator: !include HomeDicator/device/sdl.yaml
-  
+
 sensor:
   # -----------------------------------------------------------------------
   # ADD YOUR SENSORS HERE
@@ -38,49 +38,49 @@ sensor:
   # They need to be included here in order for the display to update values.
   # -----------------------------------------------------------------------
 
-  - !include 
+  - !include
       file: HomeDicator/core/templates/sensor.yaml
       vars:
         hass_sensor_id: "airgradient_schlafzimmer_temperature" # You can ommit the "sensor."
-  
-  - !include 
+
+  - !include
       file: HomeDicator/core/templates/sensor.yaml
       vars:
         hass_sensor_id: "airgradient_schlafzimmer_senseair_co2_value" # You can ommit the "sensor."
 
-  - !include 
+  - !include
       file: HomeDicator/core/templates/sensor.yaml
       vars:
         hass_sensor_id: "airgradient_schlafzimmer_particulate_matter_1_0_m_concentration" # You can ommit the "sensor."
 
-  - !include 
+  - !include
       file: HomeDicator/core/templates/climate_sensor_wide.yaml
       vars:
         hass_climate_id: "schlafzimmer_schreibtisch" # You can ommit the "climate."
-  
-  - !include 
+
+  - !include
       file: HomeDicator/core/templates/climate_sensor.yaml
       vars:
         hass_climate_id: "wohnzimmer_fenster_links" # You can ommit the "climate."
 
-  - !include 
+  - !include
       file: HomeDicator/core/templates/climate_sensor.yaml
       vars:
         hass_climate_id: "kuche" # You can ommit the "climate."
 
-  - !include 
+  - !include
       file: HomeDicator/core/templates/climate_sensor_wide.yaml
       vars:
         hass_climate_id: "badezimmer_fenster" # You can ommit the "climate."
 
-  
+
 
 binary_sensor:
   # ---------------------
   # ADD YOUR SENSORS HERE
   # ---------------------
 
-         
+
 switch:
   # ----------------------
   # ADD YOUR SWITCHES HERE
@@ -88,7 +88,7 @@ switch:
 
 
 
-lvgl:  
+lvgl:
   pages:
     # ----------------------------
     # ADD / ADJUST YOUR PAGES HERE
@@ -102,7 +102,7 @@ lvgl:
               title: "Temperature" # CHANGE PAGE TITLE HERE
         - obj:
             styles: content_container
-            layout: 
+            layout:
               type: FLEX
               flex_flow: ROW_WRAP
               flex_align_main: LV_FLEX_ALIGN_START
@@ -153,7 +153,7 @@ lvgl:
               title: "Sensors" # CHANGE PAGE TITLE HERE
         - obj:
             styles: content_container
-            layout: 
+            layout:
               type: FLEX
               flex_flow: ROW_WRAP
               flex_align_main: LV_FLEX_ALIGN_START

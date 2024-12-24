@@ -1,0 +1,130 @@
+id: about
+skip: true
+bg_color: 0x0d0d0d
+bg_opa: COVER
+widgets:
+  # PAGE TITLE
+  - !include
+      file: ../templates/page_title_with_back_button.yaml
+      vars:
+        title: "About"
+        previous_page_id: "settings"
+        previous_page_name: "Settings"
+  - !include
+      file: ../templates/left_tap_area_back.yaml
+      vars:
+        previous_page_id: "settings"
+  - obj:
+      clickable: false
+      styles: content_container
+      height: 390
+      layout:
+        type: FLEX
+        flex_flow: ROW_WRAP
+        flex_align_main: LV_FLEX_ALIGN_START
+        flex_align_cross: CENTER
+      widgets:
+        - obj:
+            width: 443
+            height: 80
+            radius: 15
+            bg_color: 0x202020
+            bg_opa: COVER
+            pad_all: 0
+            pad_left: 30
+            pad_right: 30
+            layout:
+              type: FLEX
+              flex_flow: ROW
+              flex_align_main: SPACE_BETWEEN
+              flex_align_cross: CENTER
+              flex_align_track: CENTER
+            widgets:
+              - label:
+                  text_color: 0xffffff
+                  text_font: libreFranklin18
+                  text: "Name"
+              - label:
+                  text_color: 0xadadad
+                  text_font: libreFranklin18
+                  text: ${device_friendly_name}
+        - obj:
+            width: 443
+            height: 80
+            radius: 15
+            bg_color: 0x202020
+            bg_opa: COVER
+            pad_all: 0
+            pad_left: 30
+            pad_right: 30
+            layout:
+              type: FLEX
+              flex_flow: ROW
+              flex_align_main: SPACE_BETWEEN
+              flex_align_cross: CENTER
+              flex_align_track: CENTER
+            widgets:
+              - label:
+                  text_color: 0xffffff
+                  text_font: libreFranklin18
+                  text: "ESPHome Version"
+              - label:
+                  id: esphome_version_ui_label
+                  text_color: 0xadadad
+                  text_font: libreFranklin18
+                  text: " "
+        - obj:
+            width: 443
+            height: 80
+            radius: 15
+            bg_color: 0x202020
+            bg_opa: COVER
+            pad_all: 0
+            pad_left: 30
+            pad_right: 30
+            layout:
+              type: FLEX
+              flex_flow: ROW
+              flex_align_main: SPACE_BETWEEN
+              flex_align_cross: CENTER
+              flex_align_track: CENTER
+            widgets:
+              - label:
+                  text_color: 0xffffff
+                  text_font: libreFranklin18
+                  text: "HomeDicator Core"
+              - label:
+                  id: homedicator_core_update_available_label
+                  text_color: 0xd17621
+                  text_font: libreFranklin18
+                  text: "Update available"
+                  hidden: true
+              - label:
+                  id: homedicator_core_up_to_date_label
+                  text_color: 0x529940
+                  text_font: libreFranklin18
+                  text: "Up to date"
+        - obj:
+            width: 443
+            height: 80
+            radius: 15
+            bg_color: 0x202020
+            bg_opa: COVER
+            pad_all: 0
+            pad_left: 30
+            pad_right: 30
+            layout:
+              type: FLEX
+              flex_flow: ROW
+              flex_align_main: SPACE_BETWEEN
+              flex_align_cross: CENTER
+              flex_align_track: CENTER
+            widgets:
+              - label:
+                  text_color: 0xffffff
+                  text_font: libreFranklin18
+                  text: "Code"
+              - label:
+                  text_color: 0xadadad
+                  text_font: libreFranklin18
+                  text: "github.com/HomeDicator"
