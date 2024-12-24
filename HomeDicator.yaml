@@ -5,20 +5,16 @@ substitutions:
   device_name: "homedicator-development"
   device_friendly_name: "HomeDicator Development"
 
-  # --------------
-  # ENTER API HERE
-  # --------------
+  # ------------------
+  # ENTER API KEY HERE
+  # ------------------
   api_key: "<api-key>"
 
-  # ---------------------------------
+  # ----------------------------------------------------------------------------------------------------
   # ADJUST TOTAL NUMBER OF PAGES HERE
-  # ---------------------------------
-  total_pages: "3" # is used to generate navigation dots and their logic (set it to your pages + 1 for the settings page)
-
-  # --------------
-  # OTHER SETTINGS
-  # --------------
-  user_interface_debug_mode: "false" # Draws borders around objects and labels for layouting
+  # Is used to generate navigation dots and their logic (set it to your pages + 1 for the settings page)
+  # ----------------------------------------------------------------------------------------------------
+  total_pages: "3"
 
   # ----------------------------------------------------------------------
   # GITHUB VERSION TAG
@@ -26,7 +22,13 @@ substitutions:
   # Changing this might require you to update your configuration.
   # Currently you need to manually download the files of the new version.
   # ----------------------------------------------------------------------
-  homedicator_core_version_tag: "v0.3.0"
+  homedicator_core_version_tag: "v0.3.1"
+
+  # --------------
+  # OTHER SETTINGS
+  # --------------
+  page_transition_time: 150ms # How long to animate the transition between pages.
+  user_interface_debug_mode: "false" # Draws borders around objects and labels for layouting
 
 packages:
   HomeDicator: !include HomeDicator/device/sdl.yaml

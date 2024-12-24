@@ -171,6 +171,7 @@ widgets:
                 - script.execute: hide_page_control_elements
                 - lvgl.page.show:
                     animation: MOVE_LEFT
+                    time: ${page_transition_time}
                     id: about
             layout:
               type: FLEX
