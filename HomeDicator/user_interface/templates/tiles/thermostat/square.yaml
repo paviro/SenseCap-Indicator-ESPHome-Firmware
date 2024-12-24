@@ -1,6 +1,6 @@
 obj:
   styles: info_or_button_tile
-  layout: 
+  layout:
     type: FLEX
     flex_flow: COLUMN
     flex_align_main: CENTER
@@ -22,7 +22,7 @@ obj:
               pad_all: 0
               pad_top: 53
               bg_opa: TRANSP
-              layout: 
+              layout:
                 type: FLEX
                 flex_flow: COLUMN
                 flex_align_main: CENTER
@@ -38,7 +38,7 @@ obj:
                     pad_left: 5
                     pad_bottom: 37
                     text_color: ${color}
-                    layout: 
+                    layout:
                       type: FLEX
                       flex_flow: ROW
                       flex_align_main: CENTER
@@ -64,7 +64,7 @@ obj:
               radius: 15
               bg_opa: TRANSP
               pad_all: 0
-              layout: 
+              layout:
                 type: FLEX
                 flex_flow: COLUMN
                 flex_align_main: CENTER
@@ -74,6 +74,8 @@ obj:
               widgets:
                 - arc:
                     id: lvgl_arc_${hass_climate_id}
+                    state:
+                      disabled: true
                     pad_all: 0
                     adjustable: true
                     min_value: ${min_value}

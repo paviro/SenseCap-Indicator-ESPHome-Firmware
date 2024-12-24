@@ -3,6 +3,10 @@ id: ${hass_climate_id}
 entity_id: climate.${hass_climate_id}
 attribute: temperature
 on_value:
+  - lvgl.widget.update:
+      id: lvgl_slider_${hass_climate_id}
+      state:
+        disabled: false
   - if:
      condition:
        lambda: |-

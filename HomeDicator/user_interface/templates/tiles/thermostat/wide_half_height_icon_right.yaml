@@ -20,6 +20,8 @@ obj:
         widgets:
           - slider:
               id: lvgl_slider_${hass_climate_id}
+              state:
+                disabled: true
               min_value: ${min_value}
               max_value: ${max_value}
               value: ${min_value}
