@@ -10,7 +10,7 @@ obj:
         height: 78
         pad_right: 25
         pad_left: 11
-        layout: 
+        layout:
           type: FLEX
           flex_flow: ROW
           flex_align_main: SPACE_BETWEEN
@@ -48,7 +48,7 @@ obj:
                       id: user_is_interacting
                       value: 'false'
               on_value: !include helpers/on_value.yaml
-              
+
           - obj:
               bg_opa: COVER
               bg_color: ${color}
@@ -67,13 +67,14 @@ obj:
                     styles: info_or_button_tile_icon
                     text: ${icon}
     - obj:
+        clickable: false
         bg_opa: TRANSP
         width: SIZE_CONTENT
         height: SIZE_CONTENT
         pad_all: 0
         x: 28
         y: 23
-        layout: 
+        layout:
           type: FLEX
           flex_flow: ROW
           flex_align_main: CENTER
@@ -90,4 +91,3 @@ obj:
               text_font: libreFranklin20Light
               text_color: 0xffffff
               text: "${unit}"
-    
