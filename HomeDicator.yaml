@@ -26,7 +26,7 @@ substitutions:
   # Changing this might require you to update your configuration.
   # Currently you need to manually download the files of the new version.
   # ----------------------------------------------------------------------
-  homedicator_core_version_tag: "v0.2.0"
+  homedicator_core_version_tag: "v0.3.0"
 
 packages:
   HomeDicator: !include HomeDicator/device/sdl.yaml
