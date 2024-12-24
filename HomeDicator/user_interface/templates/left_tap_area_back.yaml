@@ -1,0 +1,13 @@
+obj:
+  x: 0
+  y: 90
+  width: 20
+  height: 380
+  bg_opa: TRANSP
+  pad_all: 0
+  on_press:
+    then:
+      - script.execute: show_page_control_elements
+      - lvgl.page.show:
+          animation: MOVE_RIGHT
+          id: ${previous_page_id}

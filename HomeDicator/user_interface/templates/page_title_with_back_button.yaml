@@ -1,0 +1,55 @@
+obj:
+  bg_opa: TRANSP
+  x: 0
+  y: 50
+  width: 480
+  height: SIZE_CONTENT
+  pad_all: 0
+  border_color: red
+  widgets:
+    - label:
+        width: 480
+        pad_all: 0
+        height: SIZE_CONTENT
+        text_color: 0xFFFFFF
+        text_font: libreFranklin24
+        text_align: CENTER
+        text: ${title}
+    - button:
+        x: 6
+        bg_opa: TRANSP
+        border_width: 0
+        shadow_width: 0
+        width: SIZE_CONTENT
+        height: 40
+        pad_all: 0
+        on_click:
+          then:
+            - script.execute: show_page_control_elements
+            - lvgl.page.show:
+                animation: MOVE_RIGHT
+                id: ${previous_page_id}
+        widgets:
+          - obj:
+              bg_opa: TRANSP
+              width: SIZE_CONTENT
+              height: SIZE_CONTENT
+              pad_all: 0
+              clickable: false
+              layout:
+                type: FLEX
+                flex_flow: ROW
+                flex_align_cross: CENTER
+                pad_column: -5
+              widgets:
+                - label:
+                    pad_all: 0
+                    text_color: 0xffffff
+                    text_font: ui_light_icons
+                    text: "\U0000F141"
+                - label:
+                    pad_top: 1
+                    pad_all: 0
+                    text_color: 0xffffff
+                    text_font: libreFranklin18
+                    text: ${previous_page_name}

@@ -2,13 +2,14 @@
 sensor:
   - !include core/config/common/sensors/wifi_signal.yaml
   - !include core/config/common/sensors/wifi_signal_percent.yaml
-  
+
 text_sensor:
   - !include core/config/common/text_sensors/github_release_tag.yaml
+  - !include core/config/common/text_sensors/esphome_version.yaml
 
 binary_sensor:
   - !include core/config/common/binary_sensors/indicator_button.yaml
-         
+
 switch:
   - !include core/config/common/switches/use_24h_clock_switch.yaml
 
@@ -21,6 +22,7 @@ lvgl:
   style_definitions: !include user_interface/theme/style_definitions.yaml
   pages:
     - !include user_interface/pages/settings.yaml
+    - !include user_interface/pages/about.yaml
 
 
 <<: !include core/config/common/fonts.yaml

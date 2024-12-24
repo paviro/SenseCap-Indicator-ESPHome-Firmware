@@ -1,0 +1,8 @@
+platform: version
+id: "esphome_version"
+hide_timestamp: true
+on_value:
+    then:
+      - lvgl.label.update:
+          id: esphome_version_ui_label
+          text: !lambda return x;
