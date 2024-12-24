@@ -7,7 +7,7 @@ obj:
     - obj:
         styles: info_or_button_tile_wide
         width: 440
-        layout: 
+        layout:
           type: FLEX
           flex_flow: COLUMN
           flex_align_main: START
@@ -52,13 +52,14 @@ obj:
                       value: 'false'
               on_value: !include helpers/on_value.yaml
     - obj:
+        clickable: false
         bg_opa: TRANSP
         width: SIZE_CONTENT
         height: SIZE_CONTENT
         pad_all: 0
         x: 50
         y: 75
-        layout: 
+        layout:
           type: FLEX
           flex_flow: ROW
           flex_align_main: CENTER
@@ -75,4 +76,3 @@ obj:
               text_font: libreFranklin25Light
               text_color: 0xffffff
               text: "${unit}"
-    
