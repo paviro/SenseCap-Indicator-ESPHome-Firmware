@@ -1,4 +1,5 @@
 obj:
+  id: right_tap_area
   x: 460
   y: 70
   width: 20

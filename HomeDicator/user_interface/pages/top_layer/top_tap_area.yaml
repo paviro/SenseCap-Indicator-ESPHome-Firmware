@@ -1,11 +1,12 @@
 obj:
+  id: top_tap_area
   x: 0
   y: 0
   pad_all: 0
   width: 480
   height: SIZE_CONTENT
   bg_opa: TRANSP
-  layout: 
+  layout:
     type: FLEX
     flex_flow: ROW
     flex_align_main: SPACE_BETWEEN
