@@ -1,4 +1,7 @@
----
+---    
+substitutions:
+    homedicator_core_version_tag: "v0.3.2"
+    
 sensor:
   - !include core/config/common/sensors/wifi_signal.yaml
   - !include core/config/common/sensors/wifi_signal_percent.yaml

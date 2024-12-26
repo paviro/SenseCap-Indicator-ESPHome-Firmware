@@ -16,14 +16,6 @@ substitutions:
   # ----------------------------------------------------------------------------------------------------
   total_pages: "3"
 
-  # ----------------------------------------------------------------------
-  # GITHUB VERSION TAG
-  # Here you can select the version of the core HomeDicator package to use
-  # Changing this might require you to update your configuration.
-  # Currently you need to manually download the files of the new version.
-  # ----------------------------------------------------------------------
-  homedicator_core_version_tag: "v0.3.1"
-
   # --------------
   # OTHER SETTINGS
   # --------------
