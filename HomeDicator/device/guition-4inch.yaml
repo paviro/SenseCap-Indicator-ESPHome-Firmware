@@ -1,0 +1,7 @@
+packages:
+  HomeDicatorBase: !include ../core.yaml
+
+binary_sensor:
+  - id: !remove indicator_button
+
+<<: !include ../core/config/device/guition-4inch/hardware.yaml
