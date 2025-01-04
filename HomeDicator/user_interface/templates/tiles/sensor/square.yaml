@@ -28,6 +28,7 @@ obj:
     - obj:
         styles: info_or_button_tile_info
         width: SIZE_CONTENT
+        text_color: ${color}
         layout:
           type: FLEX
           flex_flow: ROW
