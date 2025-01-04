@@ -1,0 +1,4 @@
+packages:
+  HomeDicatorBase: !include ../core.yaml
+  
+<<: !include ../core/config/device/guition-4inch/hardware.yaml

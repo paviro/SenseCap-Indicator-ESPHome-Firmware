@@ -1,7 +1,7 @@
----    
+---
 substitutions:
-    homedicator_core_version_tag: "v0.3.2"
-    
+  homedicator_core_version_tag: "v0.3.2"
+
 sensor:
   - !include core/config/common/sensors/wifi_signal.yaml
   - !include core/config/common/sensors/wifi_signal_percent.yaml
@@ -11,7 +11,7 @@ text_sensor:
   - !include core/config/common/text_sensors/esphome_version.yaml
 
 binary_sensor:
-  - !include core/config/common/binary_sensors/indicator_button.yaml
+  # - !include core/config/common/binary_sensors/indicator_button.yaml
 
 switch:
   - !include core/config/common/switches/use_24h_clock_switch.yaml

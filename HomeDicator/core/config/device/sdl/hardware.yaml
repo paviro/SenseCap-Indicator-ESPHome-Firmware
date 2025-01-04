@@ -2,7 +2,7 @@ host:
 
 output:
   - platform: template
-    id: ledc_gpio45
+    id: ledc_pin
     type: float
     write_action:
       - logger.log: "Backlight output changed!"
