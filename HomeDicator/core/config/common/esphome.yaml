@@ -10,6 +10,8 @@ esphome:
 
   platformio_options:
     build_unflags: -Werror=all
+    lib_deps:
+      - ArduinoJson
 
   on_boot:
     - priority: 800.0

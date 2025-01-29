@@ -246,6 +246,7 @@ font:
       "\U000F0F91", # mdi:wardrobe-outline
       "\U000F111C", # mdi:window-shutter
       "\U000F111E", # mdi:window-shutter-open
+      "\U000F058E", # mdi:WaterPercent
     ]
 
 
