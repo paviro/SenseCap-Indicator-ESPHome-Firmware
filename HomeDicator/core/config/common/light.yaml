@@ -15,4 +15,4 @@ light:
           - delay: 220ms # Waiting for transition to be done so the new state is reflected. Maybe there is a better way?
           - lvgl.slider.update:
               id: lvgl_indicator_lcd_brightness_slider
-              value: !lambda "return id(indicator_display_backlight).current_values.get_brightness() * 100.0;"
+              value: !lambda 'return id(indicator_display_backlight).current_values.get_brightness() * 100.0;'

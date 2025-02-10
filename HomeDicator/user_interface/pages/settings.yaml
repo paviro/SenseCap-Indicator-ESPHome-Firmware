@@ -4,9 +4,9 @@ bg_opa: COVER
 widgets:
   # PAGE TITLE
   - !include
-    file: ../templates/page_title.yaml
-    vars:
-      title: "Settings"
+      file: ../templates/page_title.yaml
+      vars:
+        title: "Settings"
   - obj:
       styles: content_container
       layout:
@@ -69,12 +69,12 @@ widgets:
                           then:
                             - globals.set:
                                 id: user_is_interacting
-                                value: "true"
+                                value: 'true'
                         on_release:
                           then:
                             - globals.set:
                                 id: user_is_interacting
-                                value: "false"
+                                value: 'false'
                         on_value:
                           if:
                             condition:
@@ -84,7 +84,7 @@ widgets:
                               - light.control:
                                   id: indicator_display_backlight
                                   state: on
-                                  brightness: !lambda "return x / 100.0;"
+                                  brightness: !lambda 'return x / 100.0;'
                     - label:
                         text_color: 0xffffff
                         text_font: brightness_big
