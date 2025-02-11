@@ -130,6 +130,7 @@ widgets:
                   options:
                     - "Never"
                     - "1 min"
+                    - "3 min"
                     - "5 min"
                     - "15 min"
         - obj:

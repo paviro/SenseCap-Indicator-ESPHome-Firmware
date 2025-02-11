@@ -1,6 +1,6 @@
 light:
   - platform: monochromatic
-    output: ledc_gpio45
+    output: ledc_pin
     name: Display
     id: indicator_display_backlight
     entity_category: config

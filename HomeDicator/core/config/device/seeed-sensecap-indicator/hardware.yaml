@@ -22,7 +22,7 @@ output:
     pin:
       number: GPIO45
       ignore_strapping_warning: true
-    id: ledc_gpio45
+    id: ledc_pin
     frequency: 100Hz
 
 i2c:
